@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "esi.dogma",
+      "type": "com.demo.service.impl.DogmaServiceImpl",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+    },
+    {
+      "name": "esi.market",
+      "type": "com.demo.service.impl.MarketServiceImpl",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl"
+    },
+    {
+      "name": "esi.universe",
+      "type": "com.demo.service.impl.UniverseServiceImpl",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    }
+  ],
+  "properties": [
+    {
+      "name": "esi.universe.all-type-i-d",
+      "type": "java.util.List<java.lang.Integer>",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    }
+  ],
+  "hints": []
+}

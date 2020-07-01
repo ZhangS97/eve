@@ -1,0 +1,127 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/eve?characterEncoding=utf8
+    username: root
+    password: f7a3b731018ba9b3
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT1FROMDUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    filters: stat,wall,log4j
+    logSlowSql: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  jpa:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+        show-sql: true
+
+  thymeleaf:
+    enabled: true  #开启thymeleaf视图解析
+    encoding: utf-8  #编码
+    prefix: classpath:/templates/  #前缀
+    cache: false  #是否使用缓存
+    mode: HTML  #严格的HTML语法模式
+    suffix: .html  #后缀名
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 0 #默认是索引为的0的数据库
+    jedis:
+      pool:
+        max-idle: 20
+        max-wait: -1
+        min-idle: 1
+        max-active: 20
+    timeout: 5000
+
+esi:
+  market:
+    markets: https://esi.evetech.net/dev/markets/
+    params:
+      datasource: tranquility
+      language: zh
+  universe:
+    threadNums: 4
+    pre: https://esi.evetech.net/dev/universe/
+    pre163: https://esi.evepc.163.com/dev/universe/
+    params:
+      datasource: tranquility
+      datasource163: serenity
+      language: zh
+  dogma:
+    pre: https://esi.evetech.net/dev/dogma/
+    params:
+      datasource: tranquility
+      language: zh
+    listA:
+      - 10000002
+    listB:
+      - 10000003
+      - 10000005
+      - 10000006
+      - 10000007
+      - 10000008
+      - 10000009
+      - 10000010
+      - 10000011
+      - 10000013
+      - 10000014
+      - 10000015
+      - 10000017
+      - 10000018
+      - 10000022
+      - 10000023
+      - 10000025
+      - 10000027
+      - 10000028
+      - 10000029
+      - 10000031
+      - 10000032
+      - 10000033
+      - 10000034
+      - 10000035
+      - 10000037
+      - 10000038
+      - 10000039
+      - 10000040
+      - 10000041
+    listC:
+      - 10000042
+      - 10000043
+      - 10000054
+      - 10000055
+      - 10000056
+      - 10000057
+      - 10000058
+      - 10000060
+      - 10000061
+      - 10000062
+      - 10000063
+      - 10000064
+      - 10000065
+      - 10000066
+      - 10000067
+      - 10000068
+    listD:
+      - 10000001
+      - 10000012
+      - 10000016
+      - 10000020
+      - 10000030
+      - 10000036
+      - 10000069
