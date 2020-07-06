@@ -1,6 +1,6 @@
 package com.demo.bundle.universe.entity;
 
-import lombok.ToString;
+import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,11 +14,10 @@ import java.io.Serializable;
  * @author makejava
  * @since 2020-06-03 15:50:14
  */
-@ToString
+@Data
 @Table(name = "constellations")
 @Entity
-public class Constellations implements Serializable
-{
+public class Constellations implements Serializable {
     private static final long serialVersionUID = 181417256459091281L;
 
     @Id
@@ -31,55 +30,5 @@ public class Constellations implements Serializable
     private Integer regionId;
 
     private String systems;
-
-    public Integer getConstellationId()
-    {
-        return constellationId;
-    }
-
-    public void setConstellationId(Integer constellationId)
-    {
-        this.constellationId = constellationId;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
-    public String getPosition()
-    {
-        return position;
-    }
-
-    public void setPosition(String position)
-    {
-        this.position = position;
-    }
-
-    public Integer getRegionId()
-    {
-        return regionId;
-    }
-
-    public void setRegionId(Integer regionId)
-    {
-        this.regionId = regionId;
-    }
-
-    public String getSystems()
-    {
-        return systems;
-    }
-
-    public void setSystems(String systems)
-    {
-        this.systems = systems;
-    }
 
 }
