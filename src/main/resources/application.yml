@@ -3,9 +3,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     platform: mysql
-    url: jdbc:mysql://localhost:3306/eve?characterEncoding=utf8
+    url: jdbc:mysql://192.168.146.129:3306/eve?characterEncoding=utf8
     username: root
-    password: f7a3b731018ba9b3
+    password: 123456
     initialSize: 5
     minIdle: 5
     maxActive: 20
