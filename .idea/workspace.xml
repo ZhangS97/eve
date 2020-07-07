@@ -2,64 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/entity/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/entity/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Constellations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Constellations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Regions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Regions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Systems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Systems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Types.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/ServletInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/config/AsyncConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/config/CorsConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/config/DruidConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/controller/MarketController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/dao/AttributesDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/dao/ConstellationsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/dao/MarketGroupsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/dao/MarketOrdersDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/dao/RegionsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/dao/SystemsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/dao/TypesDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/entity/Attributes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/entity/Constellations.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/entity/MarketGroups.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/entity/MarketOrders.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/entity/Regions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/entity/Systems.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/entity/Types.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/eveApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/AttributesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/ConstellationsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/DogmaService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/EsiService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/MarketGroupsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/MarketOrdersService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/MarketService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/RegionsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/SystemsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/TypesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/UniverseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/AttributesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/ConstellationsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/DogmaServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/EsiServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/MarketGroupsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/MarketOrdersServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/MarketServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/RegionsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/SystemsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/TypesServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/service/impl/UniverseServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/utils/ListUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/utils/Log.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/utils/MyRT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/demo/utils/SpringUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/demo/config/RedisConfiguration$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/java/com/demo/config/RedisConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/entity/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/entity/Attributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/dao/AttributesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/dao/AttributesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/AttributesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/AttributesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/DogmaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/DogmaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/impl/AttributesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/impl/AttributesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/impl/DogmaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/impl/DogmaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketOrders.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/dao/MarketGroupsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/dao/MarketGroupsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/dao/MarketOrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/dao/MarketOrdersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketGroupsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketGroupsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketOrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketOrdersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketGroupsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketGroupsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketOrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketOrdersServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Constellations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Constellations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Regions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Regions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Systems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Systems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Types.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/ConstellationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/ConstellationsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/RegionsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/RegionsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/SystemsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/SystemsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/TypesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/TypesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/ConstellationsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/RegionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/RegionsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/SystemsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/SystemsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/TypesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/TypesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/ConstellationsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/RegionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/RegionsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/SystemsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/SystemsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/TypesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/TypesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/controllers/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/controllers/MarketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -116,7 +95,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Types.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Types.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
               <caret line="53" selection-start-line="53" selection-end-line="53" />
@@ -124,20 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/entity/Attributes.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/entity/Attributes.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
-              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/ServletInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -152,7 +122,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketGroups.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketGroups.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
@@ -161,7 +131,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketOrders.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketOrders.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
               <caret line="49" selection-start-line="49" selection-end-line="49" />
@@ -170,7 +158,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Constellations.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Constellations.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
@@ -179,7 +167,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Regions.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Regions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
               <caret line="29" selection-start-line="29" selection-end-line="29" />
@@ -188,7 +176,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Systems.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Systems.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
@@ -214,9 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/dao/AttributesDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/service/AttributesService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/service/impl/AttributesServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/service/Dogma.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/service/DogmaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/controller/AttributesController.java" />
@@ -265,6 +250,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Systems.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Types.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/entity/Attributes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/cache/MarketGroupCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java" />
       </list>
     </option>
   </component>
@@ -316,10 +304,13 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1943" />
-    <option name="height" value="1043" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -366,36 +357,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="bundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eve" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eve" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="dogma" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eve" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eve" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="bundle" type="462c0819:PsiDirectoryNode" />
-              <item name="dogma" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eve" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eve" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -422,6 +383,15 @@
               <item name="eve" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="bundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eve" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -441,7 +411,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594031438428" />
-    <property name="last_opened_file_path" value="H:/IDEA WORKSPACE" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Untitled-1.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -449,7 +419,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+    <property name="settings.editor.selected.configurable" value="org.infernus.idea.checkstyle.CheckStyleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -568,12 +538,20 @@
       <workItem from="1593669252254" duration="649000" />
       <workItem from="1594019051373" duration="1643000" />
       <workItem from="1594029995973" duration="1408000" />
-      <workItem from="1594041472776" duration="1440000" />
+      <workItem from="1594041472776" duration="4761000" />
     </task>
+    <task id="LOCAL-00001" summary="@Data替换@ToString">
+      <created>1594042958153</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1594042958153</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="209036000" />
+    <option name="totallyTimeSpent" value="212357000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -629,9 +607,11 @@
       <collection />
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="@Data替换@ToString" />
+    <option name="LAST_COMMIT_MESSAGE" value="@Data替换@ToString" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/AttributesController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/MarketGroupsController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/MarketOrdersController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/RegionsController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/SystemsController.java" />
@@ -697,133 +677,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/dao/MarketGroupsDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/dao/MarketGroupsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/dao/MarketOrdersDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/dao/MarketOrdersDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketGroupsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketGroupsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketOrdersServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketOrdersServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/RegionsDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/RegionsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/SystemsDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/SystemsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/RegionsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/RegionsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/SystemsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/SystemsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/RegionsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/RegionsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/SystemsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/SystemsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketGroupsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketGroupsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketOrdersService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketOrdersService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/TypesDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/TypesDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/TypesServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/TypesServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/ConstellationsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationsServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/ConstellationsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/ConstellationsDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/ConstellationsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
@@ -837,21 +817,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/DogmaService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/DogmaService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/AttributesService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/AttributesService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/TypesService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/TypesService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
@@ -872,52 +852,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketGroups.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketOrders.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Constellations.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Constellations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Regions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Regions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Systems.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Systems.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Types.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Types.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/entity/Attributes.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/entity/Attributes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketOrders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketGroups.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
