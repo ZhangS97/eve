@@ -1,44 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java" afterDir="false" />
+    <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="@Data替换@ToString">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/component/CacheManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/entity/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/entity/Attributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/dao/AttributesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/dao/AttributesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/AttributesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/AttributesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/DogmaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/DogmaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/impl/AttributesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/impl/AttributesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/model/service/impl/DogmaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/impl/DogmaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketGroups.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/entity/MarketOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketOrders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/dao/MarketGroupsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/dao/MarketGroupsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/dao/MarketOrdersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/dao/MarketOrdersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketGroupsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketGroupsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketOrdersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketOrdersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/MarketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketGroupsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketGroupsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketOrdersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketOrdersServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/model/service/impl/MarketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Constellations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Constellations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Regions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Regions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Systems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Systems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/entity/Types.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Types.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/ConstellationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/ConstellationsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/RegionsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/RegionsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/SystemsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/SystemsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/dao/TypesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/TypesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/ConstellationsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/RegionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/RegionsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/SystemsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/SystemsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/TypesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/TypesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/ConstellationsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/RegionsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/RegionsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/SystemsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/SystemsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/bundle/universe/model/service/impl/TypesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/TypesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/controllers/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/controllers/MarketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/ServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/ServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,19 +62,35 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Types.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="176">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/CacheManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+              <folding>
+                <element signature="e#198#199#0" expanded="true" />
+                <element signature="e#234#235#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/entity/Attributes.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/ServletInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="208">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <element signature="e#664#680#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,17 +98,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
+            <state relative-caret-position="368">
               <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketGroups.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="-400">
+              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-198">
+              <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -133,53 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketOrders.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Constellations.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Regions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/entity/Systems.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="176">
+              <caret line="11" column="5" selection-start-line="4" selection-start-column="3" selection-end-line="11" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -202,8 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/service/Dogma.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/service/DogmaService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/controller/AttributesController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/service/impl/DogmaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/controller/MarketOrdersController.java" />
@@ -253,6 +198,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/cache/MarketGroupCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/ServletInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/component/CacheManager.java" />
       </list>
     </option>
   </component>
@@ -304,13 +251,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="y" value="-12" />
-    <option name="width" value="1944" />
-    <option name="height" value="1044" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -357,26 +301,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eve" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eve" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="eve" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eve" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="eve" type="b2602c69:ProjectViewProjectNode" />
@@ -392,14 +317,35 @@
               <item name="eve" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eve" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="market" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="eve" type="b2602c69:ProjectViewProjectNode" />
+              <item name="eve" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -410,7 +356,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594031438428" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1594212222543" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Untitled-1.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -539,6 +485,7 @@
       <workItem from="1594019051373" duration="1643000" />
       <workItem from="1594029995973" duration="1408000" />
       <workItem from="1594041472776" duration="4761000" />
+      <workItem from="1594208703590" duration="3233000" />
     </task>
     <task id="LOCAL-00001" summary="@Data替换@ToString">
       <created>1594042958153</created>
@@ -551,7 +498,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212357000" />
+    <option name="totallyTimeSpent" value="217054000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -563,12 +510,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="-5" y="-5" width="1717" height="931" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" sideWeight="0.50161815" side_tool="true" weight="0.32889125" />
       <window_info id="Capture Tool" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49838188" visible="true" weight="0.34438157" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49838188" visible="true" weight="0.2597715" />
       <window_info id="Structure" order="3" side_tool="true" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Palette&#9;" order="5" />
@@ -579,7 +526,7 @@
       <window_info anchor="bottom" id="Debug" order="2" />
       <window_info anchor="bottom" id="Terminal" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="5" visible="true" weight="0.23703703" />
       <window_info anchor="bottom" id="Java Enterprise" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
@@ -599,6 +546,38 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -612,7 +591,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="@Data替换@ToString" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/MarketOrdersController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/RegionsController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/SystemsController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controller/TypesController.java" />
@@ -659,13 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -810,13 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/dogma/model/service/DogmaService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -835,20 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/ServletInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -901,17 +851,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="176">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="176">
+          <caret line="11" column="5" selection-start-line="4" selection-start-column="3" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/ServletInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="e#664#680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/CacheManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
