@@ -2,19 +2,17 @@ package com.demo.component;
 
 import org.springframework.data.redis.core.RedisTemplate;
 
-public class CacheManager
-{
+public class CacheManager {
     RedisTemplate redisTemplate;
 
-    public RedisTemplate getRedisTemplate()
-    {
+    public RedisTemplate getRedisTemplate() {
         return redisTemplate;
     }
 
-    public Object fetchOneByKey(String key)
-    {
+    public Object fetchOneByKey(String key) {
         Object object = null;
-        redisTemplate.getValueSerializer();
+        redisTemplate.opsForValue();
+
         return object;
     }
 }
