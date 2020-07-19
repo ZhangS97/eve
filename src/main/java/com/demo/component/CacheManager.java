@@ -1,10 +1,12 @@
 package com.demo.component;
 
+import lombok.Data;
 import org.springframework.data.redis.core.RedisTemplate;
 
+@Data
 public class CacheManager
 {
-    RedisTemplate redisTemplate;
+    private static RedisTemplate redisTemplate;
 
     public RedisTemplate getRedisTemplate()
     {
@@ -13,8 +15,23 @@ public class CacheManager
 
     public Object fetchOneByKey(String key)
     {
-        Object object = null;
-        redisTemplate.getValueSerializer();
-        return object;
+        return redisTemplate.opsForValue().get(key);
+    }
+
+    public void saveOne(CacheItem cacheItem)
+    {
+        if (-1 == cacheItem.cacheLifetime)
+        {
+            redisTemplate.opsForValue()
+                    .set(cacheItem.cacheKey, cacheItem.cacheValue);
+        }
+        else
+        {
+            redisTemplate.opsForValue()
+                    .set(cacheItem.cacheKey,
+                            cacheItem.cacheValue,
+                            cacheItem.cacheLifetime);
+        }
+
     }
 }

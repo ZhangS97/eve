@@ -1,5 +1,8 @@
 package com.demo.component;
 
+import lombok.Data;
+
+@Data
 public abstract class Cacheable
 {
 

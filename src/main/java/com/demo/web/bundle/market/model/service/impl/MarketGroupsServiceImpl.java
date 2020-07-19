@@ -16,22 +16,35 @@ import java.util.List;
  */
 
 @Service("marketGroupsService")
-public class MarketGroupsServiceImpl implements MarketGroupsService {
+public class MarketGroupsServiceImpl implements MarketGroupsService
+{
     @Autowired
     MarketGroupsDao dao;
 
     @Override
-    public void save(MarketGroups marketGroups) {
+    public void save(MarketGroups marketGroups)
+    {
         dao.save(marketGroups);
     }
 
     @Override
-    public List<MarketGroups> findAll() {
+    public List<MarketGroups> findAll()
+    {
         return dao.findAll();
     }
 
+    //    public List<String> get
+    public void func(List<MarketGroups> marketGroupsList)
+    {
+        String[] marketGroupIdHeap;
+
+        int index = 0;
+        marketGroupsList.get(index);
+    }
+
     @Override
-    public String getTypeIdsByGIdAndRId(int marketGroupId) {
+    public String getTypeIdsByGIdAndRId(int marketGroupId)
+    {
         return dao.getTypeIdsByGIdAndRId(marketGroupId);
     }
 

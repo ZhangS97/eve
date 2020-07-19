@@ -2,13 +2,13 @@
   "groups": [
     {
       "name": "esi.dogma",
-      "type": "com.demo.service.impl.DogmaServiceImpl",
-      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+      "type": "com.demo.web.bundle.dogma.model.service.impl.DogmaServiceImpl",
+      "sourceType": "com.demo.web.bundle.dogma.model.service.impl.DogmaServiceImpl"
     },
     {
       "name": "esi.market",
-      "type": "com.demo.service.impl.MarketServiceImpl",
-      "sourceType": "com.demo.service.impl.MarketServiceImpl"
+      "type": "com.demo.web.bundle.market.model.service.impl.MarketServiceImpl",
+      "sourceType": "com.demo.web.bundle.market.model.service.impl.MarketServiceImpl"
     },
     {
       "name": "esi.universe",
