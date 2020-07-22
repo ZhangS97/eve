@@ -17,7 +17,8 @@ import java.io.Serializable;
 @Data
 @Table(name = "market_orders")
 @Entity
-public class MarketOrders implements Serializable {
+public class MarketOrders implements Serializable
+{
     private static final long serialVersionUID = 543688007212649352L;
 
     private String duration;
@@ -38,11 +39,11 @@ public class MarketOrders implements Serializable {
     @Column(name = "order_range")
     private String range;
 
-    private Integer systemId;
+    private String systemId;
 
-    private Integer regionId;
+    private String regionId;
 
-    private Integer typeId;
+    private String typeId;
 
     private String volumeRemain;
 

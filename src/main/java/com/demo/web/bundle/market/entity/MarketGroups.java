@@ -16,15 +16,16 @@ import java.io.Serializable;
 @Data
 @Table(name = "market_groups")
 @Entity
-public class MarketGroups implements Serializable {
+public class MarketGroups implements Serializable
+{
     private static final long serialVersionUID = -46034883049783062L;
 
     private String description;
 
     @Id
-    private int marketGroupId;
+    private String marketGroupId;
 
-    private int parentGroupId;
+    private String parentGroupId;
 
     private String name;
 

@@ -3,6 +3,9 @@ package com.demo.component;
 import lombok.Data;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 public class CacheManager
 {
@@ -16,6 +19,16 @@ public class CacheManager
     public Object fetchOneByKey(String key)
     {
         return redisTemplate.opsForValue().get(key);
+    }
+
+    public List<String> fetchListByKeys(String[] keys)
+    {
+        List<String> objList = new ArrayList<>();
+        for (String key : keys)
+        {
+            objList.add(fetchOneByKey(key).toString());
+        }
+        return objList;
     }
 
     public void saveOne(CacheItem cacheItem)
@@ -34,4 +47,13 @@ public class CacheManager
         }
 
     }
+
+    public void saveList(List<CacheItem> cacheItemList)
+    {
+        for (CacheItem cacheItem : cacheItemList)
+        {
+            saveOne(cacheItem);
+        }
+    }
+
 }

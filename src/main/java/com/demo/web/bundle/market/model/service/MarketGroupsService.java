@@ -10,11 +10,13 @@ import java.util.List;
  * @author makejava
  * @since 2020-05-28 12:00:09
  */
-public interface MarketGroupsService {
+public interface MarketGroupsService
+{
 
     void save(MarketGroups marketGroups);
 
     List<MarketGroups> findAll();
 
     String getTypeIdsByGIdAndRId(int groupId);
+
 }

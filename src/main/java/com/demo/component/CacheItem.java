@@ -13,7 +13,20 @@ public class CacheItem
 
     protected String cacheName;
 
-    protected static int cacheLifetime = -1;
+    protected int cacheLifetime = -1;
 
     protected boolean cacheExpired = false;
+
+    public CacheItem(String cacheKey, String cacheValue)
+    {
+        setCacheKey(cacheKey);
+        setCacheValue(cacheValue);
+    }
+
+    public CacheItem(String cacheKey, String cacheValue, int cacheLifetime)
+    {
+        setCacheKey(cacheKey);
+        setCacheValue(cacheValue);
+        setCacheLifetime(cacheLifetime);
+    }
 }
