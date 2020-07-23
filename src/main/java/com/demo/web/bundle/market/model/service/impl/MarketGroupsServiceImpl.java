@@ -30,16 +30,7 @@ public class MarketGroupsServiceImpl implements MarketGroupsService
     @Override
     public List<MarketGroups> findAll()
     {
-        return dao.findAll();
-    }
-
-    //    public List<String> get
-    public void func(List<MarketGroups> marketGroupsList)
-    {
-        String[] marketGroupIdHeap;
-
-        int index = 0;
-        marketGroupsList.get(index);
+        return dao.findAllOrderByParentGroupIdAsc();
     }
 
     @Override

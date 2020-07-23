@@ -18,5 +18,5 @@ public interface MarketGroupsDao extends JpaRepository<MarketGroups, Integer>
     @Query(value = "select mg.types from MarketGroups mg where mg.marketGroupId = :groupId")
     String getTypeIdsByGIdAndRId(@Param("groupId") int groupId);
 
-    List<MarketGroups> findAll();
+    List<MarketGroups> findAllOrderByParentGroupIdAsc();
 }
