@@ -14,4 +14,16 @@ public abstract class Cacheable
 
     }
 
+    //无限生命记录
+    public void saveOne(String key, String value)
+    {
+        cacheManager.saveOne(new CacheItem(key, value));
+    }
+
+    //有限生命记录
+    public void saveOne(String key, String value, int lifeTime)
+    {
+        cacheManager.saveOne(new CacheItem(key, value, lifeTime));
+    }
+
 }
