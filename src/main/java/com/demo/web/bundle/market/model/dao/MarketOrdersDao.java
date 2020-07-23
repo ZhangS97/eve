@@ -11,6 +11,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-06-04 20:24:18
  */
-public interface MarketOrdersDao extends JpaRepository<MarketOrders, String> {
-    List<MarketOrders> findByTypeIdAndRegionId(int typeId, int regionId);
+public interface MarketOrdersDao extends JpaRepository<MarketOrders, String>
+{
+    List<MarketOrders> findByTypeIdAndRegionId(String typeId, String regionId);
 }

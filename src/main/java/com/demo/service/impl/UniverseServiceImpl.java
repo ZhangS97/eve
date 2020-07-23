@@ -29,7 +29,8 @@ import java.util.List;
 @Service("universeService")
 @Component
 @ConfigurationProperties(prefix = "esi.universe")
-public class UniverseServiceImpl implements UniverseService {
+public class UniverseServiceImpl implements UniverseService
+{
     @Autowired
     RegionsService regionsService;
 
@@ -59,21 +60,24 @@ public class UniverseServiceImpl implements UniverseService {
     获取所有typeid并返回list
      */
     @Override
-    public List<Integer> getAllTypeID() {
+    public List<String> getAllTypeID()
+    {
         HashMap<String, Object> localParams = params;
         String querys = queryParams163;
         String typesUrl = pre163 + "types/";
-        List<Integer> types = new ArrayList<Integer>();
+        List<String> types = new ArrayList<String>();
         String jsonSting;
         int pageNum = 1;
-        while (true) {
+        while (true)
+        {
             localParams.put("page", pageNum);
             jsonSting = MyRT.getReq(typesUrl + querys, localParams);
-            if (jsonSting.equals("[]")) {
+            if (jsonSting.equals("[]"))
+            {
                 break;
             }
             types.addAll(JSONArray.parseArray(jsonSting)
-                    .toJavaList(Integer.class));
+                    .toJavaList(String.class));
             pageNum++;
         }
         return types;
@@ -83,26 +87,30 @@ public class UniverseServiceImpl implements UniverseService {
     遍历每个typeid并查询详细数据，存入数据库
      */
     @Override
-    public void updateTypes() {
-        List<Integer> allTypes = getAllTypeID();
+    public void updateTypes()
+    {
+        List<String> allTypes = getAllTypeID();
         int length = allTypes.size() / threadNums + 1;
-        List<List<Integer>> typeIDList = ListUtils.groupList(allTypes, length);
+        List<List<String>> typeIDList = ListUtils.groupList(allTypes, length);
         UniverseServiceImpl universeServiceImplProxy = SpringUtils.getBean(
                 UniverseServiceImpl.class);
-        for (List<Integer> lt : typeIDList) {
+        for (List<String> lt : typeIDList)
+        {
             universeServiceImplProxy.updateTypesTask(lt);
         }
         System.out.println("updateTypes() finished");
     }
 
     @Async
-    public void updateTypesTask(List<Integer> types) {
+    public void updateTypesTask(List<String> types)
+    {
         HashMap<String, Object> localParams = params;
         String querys = this.queryParams163;
         String typesUrl = pre163 + "types/";
         String typesDetailUrl = typesUrl;
         String jsonStr;
-        for (int id : types) {
+        for (String id : types)
+        {
             jsonStr = MyRT.getReq(typesDetailUrl + id + querys, localParams);
             System.out.println("id" + id);
             typesService.save(JSON.parseObject(jsonStr, Types.class));
@@ -110,14 +118,16 @@ public class UniverseServiceImpl implements UniverseService {
     }
 
     @Override
-    public void updateRegions() {
+    public void updateRegions()
+    {
         String regionsUrl = pre + "regions/";
         String regionsDetailUrl = regionsUrl;
         String jsonStr;
-        List<Integer> lt = MyRT.restTemplate.getForObject(regionsUrl,
+        List<String> lt = MyRT.restTemplate.getForObject(regionsUrl,
                 List.class,
                 params);
-        for (int regionID : lt) {
+        for (String regionID : lt)
+        {
             jsonStr = MyRT.getReq(regionsDetailUrl + regionID + queryParams,
                     params);
             System.out.println(regionID + jsonStr);
@@ -127,15 +137,17 @@ public class UniverseServiceImpl implements UniverseService {
     }
 
     @Override
-    public void updateConstellations() {
+    public void updateConstellations()
+    {
         String constellatonsUrl = pre + "constellations/";
         String constellatonsDetailUrl = constellatonsUrl;
         String jsonStr;
         Constellations tar;
-        List<Integer> lt = MyRT.restTemplate.getForObject(constellatonsUrl,
+        List<String> lt = MyRT.restTemplate.getForObject(constellatonsUrl,
                 List.class,
                 params);
-        for (int id : lt) {
+        for (String id : lt)
+        {
             jsonStr = MyRT.getReq(constellatonsDetailUrl + id + queryParams,
                     params);
             tar = JSON.parseObject(jsonStr, Constellations.class);
@@ -145,22 +157,25 @@ public class UniverseServiceImpl implements UniverseService {
     }
 
     @Override
-    public void updateSystems() {
+    public void updateSystems()
+    {
         String systemsUrl = pre + "systems/";
         String systemsDetailUrl = systemsUrl;
         String jsonStr;
         ResponseEntity<String> responseEntity;
         HttpStatus status;
         Systems tar;
-        List<Integer> lt = MyRT.restTemplate.getForObject(systemsUrl,
+        List<String> lt = MyRT.restTemplate.getForObject(systemsUrl,
                 List.class,
                 params);
-        for (int id : lt) {
+        for (String id : lt)
+        {
             responseEntity = MyRT.restTemplate.getForEntity(
                     systemsDetailUrl + id + queryParams, String.class, params);
             jsonStr = responseEntity.getBody();
             status = responseEntity.getStatusCode();
-            if (status.is5xxServerError()) {
+            if (status.is5xxServerError())
+            {
                 System.out.println("5xx");
             }
             System.out.println(id + jsonStr);
@@ -170,27 +185,33 @@ public class UniverseServiceImpl implements UniverseService {
     }
 
     @Override
-    public List<Integer> showHighSecureRegionsID() {
+    public List<String> showHighSecureRegionsID()
+    {
         return regionsService.showHighSecureRegionsID();
     }
 
-    public static void setQueryParams163(String queryParams163) {
+    public static void setQueryParams163(String queryParams163)
+    {
         UniverseServiceImpl.queryParams163 = queryParams163;
     }
 
-    public void setPre(String pre) {
+    public void setPre(String pre)
+    {
         this.pre = pre;
     }
 
-    public void setParams(HashMap<String, Object> params) {
+    public void setParams(HashMap<String, Object> params)
+    {
         this.params = params;
     }
 
-    public void setPre163(String pre163) {
+    public void setPre163(String pre163)
+    {
         this.pre163 = pre163;
     }
 
-    public void setThreadNums(int threadNums) {
+    public void setThreadNums(int threadNums)
+    {
         this.threadNums = threadNums;
     }
 }

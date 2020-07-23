@@ -26,7 +26,8 @@ import java.util.List;
 @Service("marketService")
 @Component
 @ConfigurationProperties(prefix = "esi.market")
-public class MarketServiceImpl implements MarketService {
+public class MarketServiceImpl implements MarketService
+{
     @Autowired
     private MarketGroupsService marketGroupsService;
 
@@ -49,14 +50,16 @@ public class MarketServiceImpl implements MarketService {
     首先获取所有marketGroupID
     然后逐个请求详细数据
      */
-    public void updateMarketGroups() {
+    public void updateMarketGroups()
+    {
         String groupUrl = markets + "groups/";
         String groupDetailUrl = groupUrl;
         String jsonStr;
         List<Integer> lt = MyRT.restTemplate.getForObject(groupUrl,
                 List.class,
                 params);
-        for (int marketGroupID : lt) {
+        for (int marketGroupID : lt)
+        {
             jsonStr = MyRT.getReq(groupDetailUrl + marketGroupID + queryParams,
                     params);
             System.out.println(marketGroupID + jsonStr);
@@ -66,12 +69,14 @@ public class MarketServiceImpl implements MarketService {
     }
 
     @Override
-    public void updateMarketOrders() {
-        List<Integer> regionID = universeService.showHighSecureRegionsID();
-        List<List<Integer>> regionIDList = ListUtils.groupList(regionID, 17);
+    public void updateMarketOrders()
+    {
+        List<String> regionID = universeService.showHighSecureRegionsID();
+        List<List<String>> regionIDList = ListUtils.groupList(regionID, 17);
         MarketServiceImpl marketServiceImplProxy = SpringUtils.getBean(
                 MarketServiceImpl.class);
-        for (List<Integer> lt : regionIDList) {
+        for (List<String> lt : regionIDList)
+        {
             marketServiceImplProxy.marketOrdersTask(lt);
         }
     }
@@ -81,12 +86,14 @@ public class MarketServiceImpl implements MarketService {
     返回list<type>
      */
     @Override
-    public List<Types> getTypeDetails(int marketGroupId) {
+    public List<Types> getTypeDetails(String marketGroupId)
+    {
         JSONArray typesArray = JSONArray.parseArray(marketGroupsService.getTypeIdsByGIdAndRId(
                 marketGroupId));
         List<Types> typesList = new ArrayList<Types>();
-        for (Object o : typesArray) {
-            typesList.add(typesService.findByTypeId((int) o));
+        for (Object o : typesArray)
+        {
+            typesList.add(typesService.findByTypeId((String) o));
         }
         return typesList;
     }
@@ -96,12 +103,14 @@ public class MarketServiceImpl implements MarketService {
     返回list<int>
      */
     @Override
-    public List<Integer> getAllTypeIds(int marketGroupId) {
+    public List<String> getAllTypeIds(String marketGroupId)
+    {
         JSONArray typesArray = JSONArray.parseArray(marketGroupsService.getTypeIdsByGIdAndRId(
                 marketGroupId));
-        List<Integer> typeIds = new ArrayList<>();
-        for (Object o : typesArray) {
-            typeIds.add((int) o);
+        List<String> typeIds = new ArrayList<>();
+        for (Object o : typesArray)
+        {
+            typeIds.add((String) o);
         }
         return typeIds;
     }
@@ -112,10 +121,12 @@ public class MarketServiceImpl implements MarketService {
     并返回相关orders的List<list>
      */
     @Override
-    public List<List<MarketOrders>> getOrders(int regionId,
-                                              List<Integer> typeIds) {
+    public List<List<MarketOrders>> getOrders(String regionId,
+            List<String> typeIds)
+    {
         List<List<MarketOrders>> tar = new ArrayList<>();
-        for (int typeId : typeIds) {
+        for (String typeId : typeIds)
+        {
             tar.add(marketOrdersService.getOrders(typeId, regionId));
         }
         System.out.println(tar.toString());
@@ -123,26 +134,31 @@ public class MarketServiceImpl implements MarketService {
     }
 
     @Async("taskExecutor")
-    public void marketOrdersTask(List<Integer> regionIds) {
+    public void marketOrdersTask(List<String> regionIds)
+    {
         String orderUrl = markets;
         String orderDetailUrl = orderUrl;
         String jsonStr;
         int pageNum;
         HashMap<String, Object> orderParams = params;
         MarketOrders tar;
-        for (int id : regionIds) {
+        for (String id : regionIds)
+        {
             pageNum = 1;
             System.out.println("id" + id);
-            while (true) {
+            while (true)
+            {
 //              System.out.println("id" + id + "pageNum" + pageNum);
                 orderParams.put("page", pageNum);
                 jsonStr = MyRT.getReq(markets + id + "/orders" + queryParams,
                         orderParams);
-                if (jsonStr.equals("[]")) {
+                if (jsonStr.equals("[]"))
+                {
                     break;
                 }
                 JSONArray jArray = JSONArray.parseArray(jsonStr);
-                for (Object o : jArray) {
+                for (Object o : jArray)
+                {
                     tar = JSON.parseObject(o.toString(), MarketOrders.class);
                     tar.setRegionId(id);
                     marketOrdersService.save(tar);
@@ -152,11 +168,13 @@ public class MarketServiceImpl implements MarketService {
         }
     }
 
-    public void setMarkets(String markets) {
+    public void setMarkets(String markets)
+    {
         this.markets = markets;
     }
 
-    public void setParams(HashMap<String, Object> params) {
+    public void setParams(HashMap<String, Object> params)
+    {
         this.params = params;
     }
 }

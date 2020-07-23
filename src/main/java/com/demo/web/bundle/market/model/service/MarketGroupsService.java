@@ -17,6 +17,6 @@ public interface MarketGroupsService
 
     List<MarketGroups> findAll();
 
-    String getTypeIdsByGIdAndRId(int groupId);
+    String getTypeIdsByGIdAndRId(String groupId);
 
 }

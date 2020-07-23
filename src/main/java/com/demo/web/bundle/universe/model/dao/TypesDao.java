@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author makejava
  * @since 2020-06-04 09:55:44
  */
-public interface TypesDao extends JpaRepository<Types, Integer> {
+public interface TypesDao extends JpaRepository<Types, String>
+{
 
 }

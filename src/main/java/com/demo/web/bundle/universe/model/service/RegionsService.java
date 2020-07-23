@@ -10,8 +10,9 @@ import java.util.List;
  * @author makejava
  * @since 2020-06-03 14:17:53
  */
-public interface RegionsService {
+public interface RegionsService
+{
     void save(Regions regions);
 
-    List<Integer> showHighSecureRegionsID();
+    List<String> showHighSecureRegionsID();
 }

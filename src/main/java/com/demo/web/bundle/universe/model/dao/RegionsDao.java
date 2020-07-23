@@ -12,7 +12,8 @@ import org.springframework.data.jpa.repository.Query;
  * @author makejava
  * @since 2020-06-03 14:17:53
  */
-public interface RegionsDao extends JpaRepository<Regions, Integer> {
+public interface RegionsDao extends JpaRepository<Regions, String>
+{
     @Query(value = "select r.regionId from Regions r ")
     Page findAllHighSecureRegion(Pageable pageable);
 }

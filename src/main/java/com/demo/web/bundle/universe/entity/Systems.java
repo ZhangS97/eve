@@ -16,10 +16,11 @@ import java.io.Serializable;
 @Data
 @Table(name = "systems")
 @Entity
-public class Systems implements Serializable {
+public class Systems implements Serializable
+{
     private static final long serialVersionUID = 269874505323992643L;
 
-    private Integer constellationId;
+    private String constellationId;
 
     private String name;
 
@@ -31,13 +32,13 @@ public class Systems implements Serializable {
 
     private String securityStatus;
 
-    private Integer starId;
+    private String starId;
 
     private String stargates;
 
     private String stations;
 
     @Id
-    private Integer systemId;
+    private String systemId;
 
 }

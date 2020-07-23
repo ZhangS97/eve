@@ -13,17 +13,20 @@ import org.springframework.stereotype.Service;
  * @since 2020-06-04 09:55:44
  */
 @Service("typesService")
-public class TypesServiceImpl implements TypesService {
+public class TypesServiceImpl implements TypesService
+{
     @Autowired
     TypesDao dao;
 
     @Override
-    public void save(Types types) {
+    public void save(Types types)
+    {
         dao.save(types);
     }
 
     @Override
-    public Types findByTypeId(int id) {
+    public Types findByTypeId(String id)
+    {
         return dao.findById(id).get();
     }
 }

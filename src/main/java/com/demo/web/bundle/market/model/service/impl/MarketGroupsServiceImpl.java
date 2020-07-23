@@ -34,7 +34,7 @@ public class MarketGroupsServiceImpl implements MarketGroupsService
     }
 
     @Override
-    public String getTypeIdsByGIdAndRId(int marketGroupId)
+    public String getTypeIdsByGIdAndRId(String marketGroupId)
     {
         return dao.getTypeIdsByGIdAndRId(marketGroupId);
     }

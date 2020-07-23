@@ -10,8 +10,9 @@ import java.util.List;
  * @author makejava
  * @since 2020-06-04 20:24:18
  */
-public interface MarketOrdersService {
+public interface MarketOrdersService
+{
     void save(MarketOrders marketOrders);
 
-    List<MarketOrders> getOrders(int typeId, int regionId);
+    List<MarketOrders> getOrders(String typeId, String regionId);
 }

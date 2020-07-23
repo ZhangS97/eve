@@ -9,5 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author makejava
  * @since 2020-06-04 16:55:26
  */
-public interface AttributesDao extends JpaRepository<Attributes, Integer> {
+public interface AttributesDao extends JpaRepository<Attributes, String>
+{
 }

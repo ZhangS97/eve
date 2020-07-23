@@ -16,7 +16,8 @@ import java.io.Serializable;
 @Data
 @Table(name = "types")
 @Entity
-public class Types implements Serializable {
+public class Types implements Serializable
+{
     private static final long serialVersionUID = 596390807839767368L;
 
     private String capacity;
@@ -25,11 +26,11 @@ public class Types implements Serializable {
 
     private String dogmaAttributes;
 
-    private Integer groupId;
+    private String groupId;
 
-    private Integer iconId;
+    private String iconId;
 
-    private Integer marketGroupId;
+    private String marketGroupId;
 
     private String mass;
 
@@ -44,12 +45,12 @@ public class Types implements Serializable {
     private String radius;
 
     @Id
-    private Integer typeId;
+    private String typeId;
 
     private String volume;
 
     private String dogmaEffects;
 
-    private Integer graphicId;
+    private String graphicId;
 
 }

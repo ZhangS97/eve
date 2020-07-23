@@ -8,8 +8,9 @@ import com.demo.web.bundle.universe.entity.Types;
  * @author makejava
  * @since 2020-06-04 09:55:44
  */
-public interface TypesService {
+public interface TypesService
+{
     void save(Types types);
 
-    Types findByTypeId(int id);
+    Types findByTypeId(String id);
 }

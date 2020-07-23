@@ -16,7 +16,8 @@ import java.io.Serializable;
 @Data
 @Table(name = "regions")
 @Entity
-public class Regions implements Serializable {
+public class Regions implements Serializable
+{
     private static final long serialVersionUID = -51929224482986887L;
 
     private String constellations;
@@ -26,6 +27,6 @@ public class Regions implements Serializable {
     private String name;
 
     @Id
-    private int regionId;
+    private String regionId;
 
 }

@@ -2,7 +2,8 @@ package com.demo.service;
 
 import java.util.List;
 
-public interface UniverseService {
+public interface UniverseService
+{
 
     void updateTypes();
 
@@ -12,7 +13,7 @@ public interface UniverseService {
 
     void updateSystems();
 
-    List<Integer> showHighSecureRegionsID();
+    List<String> showHighSecureRegionsID();
 
-    List<Integer> getAllTypeID();
+    List<String> getAllTypeID();
 }

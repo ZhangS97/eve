@@ -17,17 +17,18 @@ import java.io.Serializable;
 @Data
 @Table(name = "constellations")
 @Entity
-public class Constellations implements Serializable {
+public class Constellations implements Serializable
+{
     private static final long serialVersionUID = 181417256459091281L;
 
     @Id
-    private Integer constellationId;
+    private String constellationId;
 
     private String name;
 
     private String position;
 
-    private Integer regionId;
+    private String regionId;
 
     private String systems;
 

@@ -19,7 +19,7 @@
   "properties": [
     {
       "name": "esi.universe.all-type-i-d",
-      "type": "java.util.List<java.lang.Integer>",
+      "type": "java.util.List<java.lang.String>",
       "sourceType": "com.demo.service.impl.UniverseServiceImpl"
     }
   ],

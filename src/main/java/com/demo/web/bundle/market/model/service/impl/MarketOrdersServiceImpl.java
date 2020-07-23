@@ -15,17 +15,20 @@ import java.util.List;
  * @since 2020-06-04 20:24:18
  */
 @Service("marketOrdersService")
-public class MarketOrdersServiceImpl implements MarketOrdersService {
+public class MarketOrdersServiceImpl implements MarketOrdersService
+{
     @Autowired
     MarketOrdersDao dao;
 
     @Override
-    public void save(MarketOrders marketOrders) {
+    public void save(MarketOrders marketOrders)
+    {
         dao.save(marketOrders);
     }
 
     @Override
-    public List<MarketOrders> getOrders(int typeId, int regionId) {
+    public List<MarketOrders> getOrders(String typeId, String regionId)
+    {
         return dao.findByTypeIdAndRegionId(typeId, regionId);
     }
 

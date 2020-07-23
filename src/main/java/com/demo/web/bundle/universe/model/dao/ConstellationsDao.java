@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @since 2020-06-03 15:45:54
  */
 public interface ConstellationsDao
-        extends JpaRepository<Constellations, Integer> {
+        extends JpaRepository<Constellations, String>
+{
 
 }

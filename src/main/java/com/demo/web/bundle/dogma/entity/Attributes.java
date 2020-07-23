@@ -16,11 +16,12 @@ import java.io.Serializable;
 @Data
 @Table(name = "attributes")
 @Entity
-public class Attributes implements Serializable {
+public class Attributes implements Serializable
+{
     private static final long serialVersionUID = -41893402052442541L;
 
     @Id
-    private Integer attributeId;
+    private String attributeId;
 
     private String defaultValue;
 
@@ -34,10 +35,10 @@ public class Attributes implements Serializable {
 
     private String stackable;
 
-    private Integer iconId;
+    private String iconId;
 
     private String published;
 
-    private Integer unitId;
+    private String unitId;
 
 }
