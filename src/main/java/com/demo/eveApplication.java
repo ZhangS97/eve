@@ -1,7 +1,6 @@
 package com.demo;
 
 import com.demo.service.UniverseService;
-import com.demo.web.bundle.market.cache.MarketGroupCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -33,8 +32,8 @@ public class eveApplication implements CommandLineRunner
 //        service.getTypeIdsBy
 //        GIdAndRId(516);
 //        service.updateTypes();
-        MarketGroupCache marketGroupCache = new MarketGroupCache();
-        marketGroupCache.doLoad();
+//        MarketGroupCache marketGroupCache = new MarketGroupCache();
+//        marketGroupCache.doLoad();
     }
 
 }

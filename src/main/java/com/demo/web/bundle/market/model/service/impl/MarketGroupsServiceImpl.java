@@ -30,7 +30,7 @@ public class MarketGroupsServiceImpl implements MarketGroupsService
     @Override
     public List<MarketGroups> findAll()
     {
-        return dao.findAllOrderByParentGroupIdAsc();
+        return dao.findAll();
     }
 
     @Override
