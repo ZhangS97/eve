@@ -13,10 +13,10 @@ import java.util.List;
  * @author makejava
  * @since 2020-05-28 12:00:09
  */
-public interface MarketGroupsDao extends JpaRepository<MarketGroups, String>
-{
+public interface MarketGroupsDao extends JpaRepository<MarketGroups, String> {
     @Query(value = "select mg.types from MarketGroups mg where mg.marketGroupId = :groupId")
     String getTypeIdsByGIdAndRId(@Param("groupId") String groupId);
 
-    List<MarketGroups> findAllOrderByParentGroupIdAsc();
+    //    List<MarketGroups> findAllOrderByParentGroupIdAsc();
+    List<MarketGroups> findAll();
 }

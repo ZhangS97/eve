@@ -1,11 +1,13 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     platform: mysql
-    url: jdbc:mysql://192.168.146.129:3306/eve?characterEncoding=utf8
+    url: jdbc:mysql://47.100.93.254:3306/eve?characterEncoding=utf8
     username: root
-    password: 123456
+    password: e5e9b30f36d27c20
     initialSize: 5
     minIdle: 5
     maxActive: 20
@@ -38,7 +40,7 @@ spring:
     suffix: .html  #后缀名
 
   redis:
-    host: localhost
+    host: 47.100.93.254
     port: 6379
     database: 0 #默认是索引为的0的数据库
     jedis:

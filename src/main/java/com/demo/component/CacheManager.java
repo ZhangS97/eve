@@ -1,45 +1,39 @@
 package com.demo.component;
 
 import lombok.Data;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class CacheManager
-{
+@Configuration
+public class CacheManager {
+    //    @Autowired
     private static RedisTemplate redisTemplate;
 
-    public RedisTemplate getRedisTemplate()
-    {
+    public RedisTemplate getRedisTemplate() {
         return redisTemplate;
     }
 
-    public Object fetchOneByKey(String key)
-    {
+    public Object fetchOneByKey(String key) {
         return redisTemplate.opsForValue().get(key);
     }
 
-    public List<String> fetchListByKeys(String[] keys)
-    {
+    public List<String> fetchListByKeys(String[] keys) {
         List<String> objList = new ArrayList<>();
-        for (String key : keys)
-        {
+        for (String key : keys) {
             objList.add(fetchOneByKey(key).toString());
         }
         return objList;
     }
 
-    public void saveOne(CacheItem cacheItem)
-    {
-        if (-1 == cacheItem.cacheLifetime)
-        {
+    public void saveOne(CacheItem cacheItem) {
+        if (-1 == cacheItem.cacheLifetime) {
             redisTemplate.opsForValue()
                     .set(cacheItem.cacheKey, cacheItem.cacheValue);
-        }
-        else
-        {
+        } else {
             redisTemplate.opsForValue()
                     .set(cacheItem.cacheKey,
                             cacheItem.cacheValue,
@@ -48,10 +42,8 @@ public class CacheManager
 
     }
 
-    public void saveList(List<CacheItem> cacheItemList)
-    {
-        for (CacheItem cacheItem : cacheItemList)
-        {
+    public void saveList(List<CacheItem> cacheItemList) {
+        for (CacheItem cacheItem : cacheItemList) {
             saveOne(cacheItem);
         }
     }

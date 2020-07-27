@@ -5,11 +5,13 @@ import com.demo.component.CacheableTree;
 import com.demo.web.bundle.market.entity.MarketGroups;
 import com.demo.web.bundle.market.model.service.MarketGroupsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
-public class MarketGroupCache extends CacheableTree
-{
+@Component(value = "marketGroupCache")
+public class MarketGroupCache extends CacheableTree {
 
     public static final String NAME = "";
 
@@ -20,27 +22,24 @@ public class MarketGroupCache extends CacheableTree
     public static final String KEY_PARENT_ID = "market_group:parent_id:";
 
     @Autowired
+    @Qualifier("marketGroupsService")
     MarketGroupsService service;
 
-    public void doLoad()
-    {
+    public void doLoad() {
         List<MarketGroups> marketGroupsList = service.findAll();
+
         //存放父id及其对应的下一层儿子id，双层树状结构
         Map<String, List> map = new HashMap<>();
 
         List<String> list = new ArrayList<>();
-        for (MarketGroups marketGroups : marketGroupsList)
-        {
+        for (MarketGroups marketGroups : marketGroupsList) {
             //根据父id 查看是否存在兄弟list
             list = map.get(marketGroups.getParentGroupId());
-            if (list == null)
-            {
+            if (list == null) {
                 //若不存在，则直接添加
                 map.put(marketGroups.getParentGroupId(),
                         Arrays.asList(marketGroups.getMarketGroupId()));
-            }
-            else
-            {
+            } else {
                 //若存在则add，并更新
                 list.add(marketGroups.getMarketGroupId());
                 map.put(marketGroups.getParentGroupId(), list);
@@ -57,8 +56,7 @@ public class MarketGroupCache extends CacheableTree
 
         }
 
-        for (String str : map.keySet())
-        {
+        for (String str : map.keySet()) {
             saveOne(str, map.get(str).toString());
         }
 
