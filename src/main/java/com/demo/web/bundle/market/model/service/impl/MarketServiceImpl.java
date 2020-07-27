@@ -11,8 +11,8 @@ import com.demo.web.bundle.market.entity.MarketOrders;
 import com.demo.web.bundle.market.model.service.MarketGroupsService;
 import com.demo.web.bundle.market.model.service.MarketOrdersService;
 import com.demo.web.bundle.market.model.service.MarketService;
-import com.demo.web.bundle.universe.entity.Types;
-import com.demo.web.bundle.universe.model.service.TypesService;
+import com.demo.web.bundle.universe.entity.Type;
+import com.demo.web.bundle.universe.model.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.scheduling.annotation.Async;
@@ -38,7 +38,7 @@ public class MarketServiceImpl implements MarketService
     private UniverseService universeService;
 
     @Autowired
-    private TypesService typesService;
+    private TypeService typeService;
 
     private String markets;
 
@@ -86,16 +86,16 @@ public class MarketServiceImpl implements MarketService
     返回list<type>
      */
     @Override
-    public List<Types> getTypeDetails(String marketGroupId)
+    public List<Type> getTypeDetails(String marketGroupId)
     {
         JSONArray typesArray = JSONArray.parseArray(marketGroupsService.getTypeIdsByGIdAndRId(
                 marketGroupId));
-        List<Types> typesList = new ArrayList<Types>();
+        List<Type> typeList = new ArrayList<Type>();
         for (Object o : typesArray)
         {
-            typesList.add(typesService.findByTypeId((String) o));
+            typeList.add(typeService.findByTypeId((String) o));
         }
-        return typesList;
+        return typeList;
     }
 
     /*

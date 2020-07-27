@@ -9,11 +9,11 @@ import com.demo.utils.SpringUtils;
 import com.demo.web.bundle.universe.entity.Constellations;
 import com.demo.web.bundle.universe.entity.Regions;
 import com.demo.web.bundle.universe.entity.Systems;
-import com.demo.web.bundle.universe.entity.Types;
+import com.demo.web.bundle.universe.entity.Type;
 import com.demo.web.bundle.universe.model.service.ConstellationsService;
 import com.demo.web.bundle.universe.model.service.RegionsService;
 import com.demo.web.bundle.universe.model.service.SystemsService;
-import com.demo.web.bundle.universe.model.service.TypesService;
+import com.demo.web.bundle.universe.model.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.HttpStatus;
@@ -41,7 +41,7 @@ public class UniverseServiceImpl implements UniverseService
     SystemsService systemsService;
 
     @Autowired
-    TypesService typesService;
+    TypeService typeService;
 
     private String pre;
 
@@ -113,7 +113,7 @@ public class UniverseServiceImpl implements UniverseService
         {
             jsonStr = MyRT.getReq(typesDetailUrl + id + querys, localParams);
             System.out.println("id" + id);
-            typesService.save(JSON.parseObject(jsonStr, Types.class));
+            typeService.save(JSON.parseObject(jsonStr, Type.class));
         }
     }
 
