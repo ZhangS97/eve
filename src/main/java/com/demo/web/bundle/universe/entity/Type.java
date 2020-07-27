@@ -16,7 +16,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "types")
 @Entity
-public class Types implements Serializable
+public class Type implements Serializable
 {
     private static final long serialVersionUID = 596390807839767368L;
 
