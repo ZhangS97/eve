@@ -18,10 +18,10 @@ SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
--- Table structure for attributes
+-- Table structure for attribute
 -- ----------------------------
-DROP TABLE IF EXISTS `attributes`;
-CREATE TABLE `attributes`  (
+DROP TABLE IF EXISTS `attribute`;
+CREATE TABLE `attribute`  (
   `attribute_id` int(4) NOT NULL,
   `default_value` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
@@ -90,15 +90,15 @@ CREATE TABLE `characters`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for constellations
+-- Table structure for constellation
 -- ----------------------------
-DROP TABLE IF EXISTS `constellations`;
-CREATE TABLE `constellations`  (
+DROP TABLE IF EXISTS `constellation`;
+CREATE TABLE `constellation`  (
   `constellation_id` int(4) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `position` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `region_id` int(4) NULL DEFAULT NULL,
-  `systems` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
+  `system` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`constellation_id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
@@ -217,11 +217,11 @@ CREATE TABLE `races`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for regions
+-- Table structure for region
 -- ----------------------------
-DROP TABLE IF EXISTS `regions`;
-CREATE TABLE `regions`  (
-  `constellations` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+DROP TABLE IF EXISTS `region`;
+CREATE TABLE `region`  (
+  `constellation` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `region_id` int(4) UNSIGNED NOT NULL,
@@ -263,10 +263,10 @@ CREATE TABLE `structures`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Table structure for systems
+-- Table structure for system
 -- ----------------------------
-DROP TABLE IF EXISTS `systems`;
-CREATE TABLE `systems`  (
+DROP TABLE IF EXISTS `system`;
+CREATE TABLE `system`  (
   `constellation_id` int(4) NULL DEFAULT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `planets` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,

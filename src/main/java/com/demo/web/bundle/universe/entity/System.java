@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * (Systems)实体类
+ * (System)实体类
  *
  * @author makejava
  * @since 2020-06-03 16:10:08
@@ -16,8 +16,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "systems")
 @Entity
-public class Systems implements Serializable
-{
+public class System implements Serializable {
     private static final long serialVersionUID = 269874505323992643L;
 
     private String constellationId;

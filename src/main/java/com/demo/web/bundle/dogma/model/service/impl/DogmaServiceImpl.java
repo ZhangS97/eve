@@ -2,8 +2,8 @@ package com.demo.web.bundle.dogma.model.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.demo.utils.MyRT;
-import com.demo.web.bundle.dogma.entity.Attributes;
-import com.demo.web.bundle.dogma.model.service.AttributesService;
+import com.demo.web.bundle.dogma.entity.Attribute;
+import com.demo.web.bundle.dogma.model.service.AttributeService;
 import com.demo.web.bundle.dogma.model.service.DogmaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -18,7 +18,7 @@ import java.util.List;
 @ConfigurationProperties(prefix = "esi.dogma")
 public class DogmaServiceImpl implements DogmaService {
     @Autowired
-    AttributesService attributesService;
+    AttributeService attributeService;
 
     private String pre;
 
@@ -31,15 +31,15 @@ public class DogmaServiceImpl implements DogmaService {
         String attributesUrl = pre + "attributes/";
         String attributesDetailUrl = attributesUrl;
         String jsonStr;
-        Attributes tar = null;
+        Attribute tar = null;
         List<Integer> lt = MyRT.restTemplate.getForObject(attributesUrl,
                 List.class,
                 params);
         for (int id : lt) {
             jsonStr = MyRT.getReq(attributesDetailUrl + id, params);
             System.out.println(id);
-            tar = JSON.parseObject(jsonStr, Attributes.class);
-            attributesService.save(tar);
+            tar = JSON.parseObject(jsonStr, Attribute.class);
+            attributeService.save(tar);
         }
     }
 

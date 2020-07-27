@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * (Attributes)实体类
+ * (Attribute)实体类
  *
  * @author makejava
  * @since 2020-06-04 16:55:26
@@ -16,8 +16,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "attributes")
 @Entity
-public class Attributes implements Serializable
-{
+public class Attribute implements Serializable {
     private static final long serialVersionUID = -41893402052442541L;
 
     @Id

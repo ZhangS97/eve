@@ -16,23 +16,20 @@ import java.util.Map;
 @EnableJpaAuditing
 @SpringBootApplication
 @EnableAsync
-public class eveApplication implements CommandLineRunner
-{
+public class eveApplication implements CommandLineRunner {
     @Autowired
 //    DogmaService service;
             UniverseService service;
-//            RegionsService service;
+//            RegionService service;
 //            MarketService service;
-//            MarketGroupsService service;
+//            MarketGroupService service;
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         SpringApplication.run(eveApplication.class, args);
     }
 
     @Override
-    public void run(String... args) throws Exception
-    {
+    public void run(String... args) throws Exception {
         Map map = new HashMap();
         List list1 = Arrays.asList("a", "b", "C");
         List list2 = Arrays.asList("a", "b", "C");

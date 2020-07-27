@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * (MarketGroups)实体类
+ * (MarketGroup)实体类
  *
  * @author makejava
  * @since 2020-05-28 12:00:09
@@ -16,8 +16,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "market_groups")
 @Entity
-public class MarketGroups implements Serializable
-{
+public class MarketGroup implements Serializable {
     private static final long serialVersionUID = -46034883049783062L;
 
     private String description;

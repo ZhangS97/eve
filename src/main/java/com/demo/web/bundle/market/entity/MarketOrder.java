@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 /**
- * (MarketOrders)实体类
+ * (MarketOrder)实体类
  *
  * @author makejava
  * @since 2020-06-04 20:26:22
@@ -17,8 +17,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "market_orders")
 @Entity
-public class MarketOrders implements Serializable
-{
+public class MarketOrder implements Serializable {
     private static final long serialVersionUID = 543688007212649352L;
 
     private String duration;
