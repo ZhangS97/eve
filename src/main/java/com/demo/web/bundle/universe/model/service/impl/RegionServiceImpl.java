@@ -18,18 +18,27 @@ import java.util.List;
  * @since 2020-06-03 14:17:53
  */
 @Service("regionsService")
-public class RegionServiceImpl implements RegionService {
+public class RegionServiceImpl implements RegionService
+{
     @Resource
     private RegionDao dao;
 
-    public List<String> showHighSecureRegionsID() {
+    public List<String> showHighSecureRegionsID()
+    {
         Sort sort = Sort.by(Sort.Direction.ASC, "regionId");
         Pageable pageable = PageRequest.of(0, 67, sort);
         return dao.findAllHighSecureRegion(pageable).getContent();
     }
 
     @Override
-    public void save(Region region) {
+    public List<Region> findAll()
+    {
+        return dao.findAll();
+    }
+
+    @Override
+    public void save(Region region)
+    {
         dao.save(region);
     }
 }
