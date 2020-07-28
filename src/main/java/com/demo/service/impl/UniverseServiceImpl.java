@@ -6,14 +6,9 @@ import com.demo.service.UniverseService;
 import com.demo.utils.ListUtils;
 import com.demo.utils.MyRT;
 import com.demo.utils.SpringUtils;
-import com.demo.web.bundle.universe.entity.Constellation;
-import com.demo.web.bundle.universe.entity.Region;
 import com.demo.web.bundle.universe.entity.System;
-import com.demo.web.bundle.universe.entity.Type;
-import com.demo.web.bundle.universe.model.service.ConstellationService;
-import com.demo.web.bundle.universe.model.service.RegionService;
-import com.demo.web.bundle.universe.model.service.SystemService;
-import com.demo.web.bundle.universe.model.service.TypeService;
+import com.demo.web.bundle.universe.entity.*;
+import com.demo.web.bundle.universe.model.service.*;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -41,6 +36,9 @@ public class UniverseServiceImpl implements UniverseService
 
     @Autowired
     SystemService systemService;
+
+    @Autowired
+    StationService stationService;
 
     @Autowired
     TypeService typeService;
@@ -184,6 +182,23 @@ public class UniverseServiceImpl implements UniverseService
             tar = JSON.parseObject(jsonStr, System.class);
             systemService.save(tar);
         }
+    }
+
+    @Override
+    public void updateStations()
+    {
+        String stationDetailUrl = pre163 + "stations/";
+        HashMap<String, Object> localParams = params;
+        String querys = this.queryParams163;
+        List<String> stationIds = systemService.findAllStationIds();
+        String jsonStr;
+
+        for (String id : stationIds)
+        {
+            jsonStr = MyRT.getReq(stationDetailUrl + id + querys, localParams);
+            stationService.save(JSON.parseObject(jsonStr, Station.class));
+        }
+
     }
 
     @Override

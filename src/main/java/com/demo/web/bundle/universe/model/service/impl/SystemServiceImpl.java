@@ -6,6 +6,8 @@ import com.demo.web.bundle.universe.model.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -30,5 +32,17 @@ public class SystemServiceImpl implements SystemService
     public List<System> findAll()
     {
         return dao.findAll();
+    }
+
+    @Override
+    public List<String> findAllStationIds()
+    {
+        List<String> res = new ArrayList<>();
+        for (String str : dao.findAllStationIds())
+        {
+            res.addAll(Arrays.asList(str.split(",")));
+        }
+        //res一位存一个id
+        return res;
     }
 }

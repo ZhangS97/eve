@@ -13,6 +13,8 @@ public interface UniverseService
 
     void updateSystems();
 
+    void updateStations();
+
     List<String> showHighSecureRegionsID();
 
     List<String> getAllTypeID();

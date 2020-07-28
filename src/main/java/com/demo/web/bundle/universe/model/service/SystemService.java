@@ -15,4 +15,6 @@ public interface SystemService
     void save(System system);
 
     List<System> findAll();
+
+    List<String> findAllStationIds();
 }
