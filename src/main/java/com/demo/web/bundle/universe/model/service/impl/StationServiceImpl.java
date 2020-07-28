@@ -4,9 +4,11 @@ import com.demo.web.bundle.universe.entity.Station;
 import com.demo.web.bundle.universe.model.dao.StationsDao;
 import com.demo.web.bundle.universe.model.service.StationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class StationServiceImpl implements StationService
 {
     @Autowired
