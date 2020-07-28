@@ -14,7 +14,7 @@ public class RegionCache extends Cacheable
     public static final String KEY_ID = "region:id:";
 
     //根据regionId存储对应的多个constellationId
-    public static final String KEY_CONSTELLATIONS_ID = "region:constellations:id";
+    public static final String KEY_CONSTELLATION_ID = "region:constellation:id";
 
     @Autowired
     RegionService regionService;
@@ -26,9 +26,10 @@ public class RegionCache extends Cacheable
         for (Region region : allRegions)
         {
             //存储本身
-            saveOne(KEY_ID, JSON.toJSONString(region));
+            saveOne(KEY_ID + region.getRegionId(), JSON.toJSONString(region));
             //存储constellationIds
-            saveOne(KEY_CONSTELLATIONS_ID, region.getConstellations());
+            saveOne(KEY_CONSTELLATION_ID + region.getRegionId(),
+                    region.getConstellations());
         }
     }
 }

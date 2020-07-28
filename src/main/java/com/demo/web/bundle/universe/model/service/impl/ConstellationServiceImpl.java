@@ -6,6 +6,7 @@ import com.demo.web.bundle.universe.model.service.ConstellationService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * (Constellation)表服务实现类
@@ -14,12 +15,20 @@ import javax.annotation.Resource;
  * @since 2020-06-03 15:45:54
  */
 @Service("constellationsService")
-public class ConstellationServiceImpl implements ConstellationService {
+public class ConstellationServiceImpl implements ConstellationService
+{
     @Resource
     private ConstellationDao dao;
 
     @Override
-    public void save(Constellation constellation) {
+    public void save(Constellation constellation)
+    {
         dao.save(constellation);
+    }
+
+    @Override
+    public List<Constellation> findAll()
+    {
+        return dao.findAll();
     }
 }

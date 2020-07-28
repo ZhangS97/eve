@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/ConstellationCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/ConstellationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/ConstellationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/RegionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/RegionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/RegionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/RegionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/RegionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/RegionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -87,28 +85,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/CacheableTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/Cacheable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="456">
+              <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,11 +96,48 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/ConstellationDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="247">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="17" />
+              <folding>
+                <element signature="e#764#765#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/ConstellationCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,15 +173,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/component/CacheManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -195,9 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/bundle/dogma/entity/Attributes.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/bundle/market/cache/MarketGroupCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/ServletInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/component/TreeCacheable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketGroups.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/entity/MarketOrders.java" />
@@ -244,8 +249,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/RegionDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/RegionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/RegionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/ConstellationDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/ConstellationCache.java" />
       </list>
     </option>
   </component>
@@ -301,6 +309,9 @@
     <option name="y" value="21" />
     <option name="width" value="1932" />
     <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -474,7 +485,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595924278439" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595924937143" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Untitled-1.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -616,7 +627,7 @@
       <workItem from="1595917444134" duration="237000" />
       <workItem from="1595918586834" duration="424000" />
       <workItem from="1595919019199" duration="603000" />
-      <workItem from="1595920652990" duration="2789000" />
+      <workItem from="1595920652990" duration="3436000" />
     </task>
     <task id="LOCAL-00001" summary="@Data替换@ToString">
       <created>1594042958153</created>
@@ -688,11 +699,18 @@
       <option name="project" value="LOCAL" />
       <updated>1595860831848</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="新增RegionCache">
+      <created>1595924317462</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1595924317462</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269884000" />
+    <option name="totallyTimeSpent" value="270531000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -800,7 +818,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="update marketgroupcache" />
     <MESSAGE value="文件重命名" />
-    <option name="LAST_COMMIT_MESSAGE" value="文件重命名" />
+    <MESSAGE value="新增RegionCache" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增RegionCache" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -821,13 +840,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/service/impl/EsiServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/controllers/MarketController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -891,24 +903,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/SystemServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1180,10 +1178,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/ConstellationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1192,8 +1190,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/dao/ConstellationDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="247">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/ConstellationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/ConstellationCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
