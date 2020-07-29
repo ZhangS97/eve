@@ -2,8 +2,8 @@
   "groups": [
     {
       "name": "esi.dogma",
-      "type": "com.demo.web.bundle.dogma.model.service.impl.DogmaServiceImpl",
-      "sourceType": "com.demo.web.bundle.dogma.model.service.impl.DogmaServiceImpl"
+      "type": "com.demo.service.impl.DogmaServiceImpl",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
     },
     {
       "name": "esi.market",
@@ -18,8 +18,119 @@
   ],
   "properties": [
     {
+      "name": "esi.dogma.all-attribute-ids",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+    },
+    {
+      "name": "esi.dogma.all-effect-ids",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+    },
+    {
+      "name": "esi.dogma.attribute-service",
+      "type": "com.demo.web.bundle.dogma.model.service.AttributeService",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+    },
+    {
+      "name": "esi.dogma.effect-service",
+      "type": "com.demo.web.bundle.dogma.model.service.EffectService",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+    },
+    {
+      "name": "esi.dogma.params",
+      "type": "java.util.HashMap<java.lang.String,java.lang.Object>",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+    },
+    {
+      "name": "esi.dogma.pre",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+    },
+    {
+      "name": "esi.dogma.pre163",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl"
+    },
+    {
+      "name": "esi.dogma.query-params",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl",
+      "defaultValue": "\/?datasource={datasource}&language={language}&page={page}"
+    },
+    {
+      "name": "esi.dogma.query-params163",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl",
+      "defaultValue": "\/?datasource={datasource163}&language={language}&page={page}"
+    },
+    {
+      "name": "esi.dogma.thread-nums",
+      "type": "java.lang.Integer",
+      "sourceType": "com.demo.service.impl.DogmaServiceImpl",
+      "defaultValue": 0
+    },
+    {
       "name": "esi.universe.all-type-i-d",
       "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.constellation-service",
+      "type": "com.demo.web.bundle.universe.model.service.ConstellationService",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.params",
+      "type": "java.util.HashMap<java.lang.String,java.lang.Object>",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.pre",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.pre163",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.query-params",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl",
+      "defaultValue": "\/?datasource={datasource}&language={language}&page={page}"
+    },
+    {
+      "name": "esi.universe.query-params163",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl",
+      "defaultValue": "\/?datasource={datasource163}&language={language}&page={page}"
+    },
+    {
+      "name": "esi.universe.region-service",
+      "type": "com.demo.web.bundle.universe.model.service.RegionService",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.station-service",
+      "type": "com.demo.web.bundle.universe.model.service.StationService",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.system-service",
+      "type": "com.demo.web.bundle.universe.model.service.SystemService",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.thread-nums",
+      "type": "java.lang.Integer",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl",
+      "defaultValue": 0
+    },
+    {
+      "name": "esi.universe.type-service",
+      "type": "com.demo.web.bundle.universe.model.service.TypeService",
       "sourceType": "com.demo.service.impl.UniverseServiceImpl"
     }
   ],

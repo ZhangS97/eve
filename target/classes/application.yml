@@ -67,8 +67,10 @@ esi:
       language: zh
   dogma:
     pre: https://esi.evetech.net/dev/dogma/
+    pre163: https://esi.evepc.163.com/dev/dogma/
     params:
       datasource: tranquility
+      datasource163: serenity
       language: zh
     listA:
       - 10000002
