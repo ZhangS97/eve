@@ -8,7 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Component(value = "marketGroupCache")
 public class MarketGroupCache extends CacheableTree {
@@ -37,8 +40,9 @@ public class MarketGroupCache extends CacheableTree {
             list = map.get(marketGroup.getParentGroupId());
             if (list == null) {
                 //若不存在，则直接添加
-                map.put(marketGroup.getParentGroupId(),
-                        Arrays.asList(marketGroup.getMarketGroupId()));
+                list = new ArrayList<>();
+                list.add(marketGroup.getMarketGroupId());
+                map.put(marketGroup.getParentGroupId(), list);
             } else {
                 //若存在则add，并更新
                 list.add(marketGroup.getMarketGroupId());
