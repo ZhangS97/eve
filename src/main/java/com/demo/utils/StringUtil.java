@@ -7,7 +7,7 @@ public class StringUtil
         [] return null
         [1，2，3] return 1，2，3
      */
-    public String handelListInEsiRes(String str)
+    public static String handelListInEsiRes(String str)
     {
         if (str.equals("[]"))
         {

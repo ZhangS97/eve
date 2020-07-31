@@ -3,18 +3,26 @@ package com.demo.utils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.HashMap;
+import java.util.Map;
 
-public class MyRT {
+public class MyRT
+{
     public static RestTemplate restTemplate = new RestTemplate();
 
-    public static String getReq(String url, HashMap<String, Object> params) {
+    public static String getReq(String url, Map<String, Object> params)
+    {
         ResponseEntity<String> responseEntity = null;
         String jsonStr;
-        while (true) {
-            try {
-                responseEntity = MyRT.restTemplate.getForEntity(url, String.class, params);
-            } catch (Exception e) {
+        while (true)
+        {
+            try
+            {
+                responseEntity = MyRT.restTemplate.getForEntity(url,
+                        String.class,
+                        params);
+            }
+            catch (Exception e)
+            {
                 e.printStackTrace();
                 continue;
             }
@@ -24,7 +32,8 @@ public class MyRT {
         return jsonStr;
     }
 
-    public void testGet() {
+    public void testGet()
+    {
 //        // 使用方法一，传参替换
 //        url = "https://story.hhui.top/detail?id={?}";
 //        res = restTemplate.getForObject(url, InnerRes.class, "666106231640");

@@ -65,6 +65,7 @@ esi:
       datasource: tranquility
       datasource163: serenity
       language: zh
+      page: 1
   dogma:
     pre: https://esi.evetech.net/dev/dogma/
     pre163: https://esi.evepc.163.com/dev/dogma/

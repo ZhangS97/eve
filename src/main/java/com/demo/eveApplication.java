@@ -16,7 +16,7 @@ public class eveApplication implements CommandLineRunner
 {
     @Autowired
 //    DogmaService service;
-            UniverseService service;
+    UniverseService service;
 //            RegionService service;
 //            MarketService service;
 //            MarketGroupService service;
@@ -33,7 +33,8 @@ public class eveApplication implements CommandLineRunner
     public void run(String... args) throws Exception
     {
 //        MarketGroupCache marketGroupCache = new MarketGroupCache();
-        marketGroupCache.doLoad();
+//        marketGroupCache.doLoad();
+        service.updateRegions();
     }
 
 }
