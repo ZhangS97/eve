@@ -65,7 +65,7 @@ public class UniverseServiceImpl implements UniverseService
         HashMap<String, Object> localParams = params;
         String querys = queryParams163;
         String typesUrl = pre163 + "types/";
-        List<String> types = new ArrayList<String>();
+        List<String> types = new ArrayList<>();
         String jsonSting;
         int pageNum = 1;
         while (true)
@@ -98,21 +98,18 @@ public class UniverseServiceImpl implements UniverseService
         {
             universeServiceImplProxy.updateTypesTask(lt);
         }
-        java.lang.System.out.println("updateTypes() finished");
     }
 
     @Async
     public void updateTypesTask(List<String> types)
     {
         HashMap<String, Object> localParams = params;
-        String querys = this.queryParams163;
-        String typesUrl = pre163 + "types/";
-        String typesDetailUrl = typesUrl;
+        String querys = queryParams163;
+        String typesDetailUrl = pre163 + "types/";
         String jsonStr;
         for (String id : types)
         {
             jsonStr = MyRT.getReq(typesDetailUrl + id + querys, localParams);
-            java.lang.System.out.println("id" + id);
             typeService.save(JSON.parseObject(jsonStr, Type.class));
         }
     }
@@ -130,8 +127,8 @@ public class UniverseServiceImpl implements UniverseService
         {
             jsonStr = MyRT.getReq(regionsDetailUrl + regionID + queryParams,
                     params);
-            java.lang.System.out.println(regionID + jsonStr);
             Region tar = JSON.parseObject(jsonStr, Region.class);
+
             regionService.save(tar);
         }
     }
