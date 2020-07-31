@@ -1,18 +1,23 @@
 package com.demo.utils;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class MyRT
 {
     public static RestTemplate restTemplate = new RestTemplate();
 
+    /**
+     * 单次操作
+     */
     public static String getReq(String url, Map<String, Object> params)
     {
-        ResponseEntity<String> responseEntity = null;
-        String jsonStr;
+        ResponseEntity<String> responseEntity;
         while (true)
         {
             try
@@ -28,8 +33,51 @@ public class MyRT
             }
             break;
         }
-        jsonStr = responseEntity.getBody();
-        return jsonStr;
+        return responseEntity.getBody();
+    }
+
+    /**
+     * @Param List<String> id
+     * @Param url          链接前缀
+     * @Param queryParams 待填入参数模板
+     * @Param localParams 具体参数
+     * 多线程发送http请求
+     */
+    public static List<String> getReqMultiById(String url, String queryParams,
+            Map localParams,
+            List<String> ids)
+    {
+        List<List<String>> idList = ListUtils.groupList(ids);
+        List<String> resList = new ArrayList<>();
+        for (List<String> lt : idList)
+        {
+            resList.addAll(
+                    getReqMultiByIdTask(url,
+                            queryParams,
+                            localParams,
+                            lt));
+        }
+        return resList;
+    }
+
+    /**
+     * 单个线程
+     */
+    @ove
+    @Async
+    static List<String> getReqMultiByIdTask(String url,
+            String queryParams,
+            Map localParams,
+            List<String> ids)
+    {
+        String jsonStr;
+        List<String> list = new ArrayList<>();
+        for (String id : ids)
+        {
+            jsonStr = MyRT.getReq(url + id + queryParams, localParams);
+            list.add(jsonStr);
+        }
+        return list;
     }
 
     public void testGet()

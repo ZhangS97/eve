@@ -17,5 +17,4 @@ public interface UniverseService
 
     List<String> showHighSecureRegionsID();
 
-    List<String> getAllTypeID();
 }
