@@ -5,6 +5,8 @@ import java.util.List;
 public interface UniverseService
 {
 
+    void updateUniverseInfo();
+
     void updateTypes();
 
     void updateRegions();

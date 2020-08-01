@@ -86,6 +86,19 @@ public class UniverseServiceImpl implements UniverseService
     }
 
     /**
+     * 在版本更新时调用
+     * 例如：
+     * Region,Constellation,System
+     */
+    @Override
+    public void updateUniverseInfo()
+    {
+        updateRegions();
+        updateConstellations();
+        updateSystems();
+    }
+
+    /**
      * 遍历每个typeid并查询详细数据，存入数据库
      */
     @Override
@@ -132,20 +145,21 @@ public class UniverseServiceImpl implements UniverseService
         String regionsDetailUrl = regionsUrl;
         Region tar;
         //获取所有id
-        List<String> lt = MyRT.getReqCastIntListToStrList(regionsUrl,
+        List<String> ids = MyRT.getReqCastIntListToStrList(regionsUrl,
                 params);
 
-        //获取所有region的信息list
+        //获取所有region的信息jsonList
         List<String> jsonList = MyRT.getReqMultiById(regionsDetailUrl,
                 queryParams,
                 params,
-                lt);
+                ids);
 
         //遍历，处理后存储
         for (String str : jsonList)
         {
             tar = JSON.parseObject(str, Region.class);
-            //将 region的Constellations [1,2,3]变为 1,2,3
+            //将 [1,2,3]变为 1,2,3
+            //设置星座
             tar.setConstellations(
                     StringUtil.handelListInEsiRes(
                             tar.getConstellations()));
@@ -161,19 +175,24 @@ public class UniverseServiceImpl implements UniverseService
     {
         String constellatonsUrl = pre + "constellations/";
         String constellatonsDetailUrl = constellatonsUrl;
-        String jsonStr;
         Constellation tar;
 
-        List<Integer> lt = MyRT.restTemplate.getForObject(constellatonsUrl,
-                List.class,
+        //获取所有id
+        List<String> ids = MyRT.getReqCastIntListToStrList(constellatonsUrl,
                 params);
-        for (int id : lt)
+
+        //获取所有region的信息jsonList
+        List<String> jsonList = MyRT.getReqMultiById(constellatonsDetailUrl,
+                queryParams,
+                params,
+                ids);
+
+        //遍历，处理后存储
+        for (String str : jsonList)
         {
-            jsonStr = MyRT.getReq(constellatonsDetailUrl + id + queryParams,
-                    params);
-            tar = JSON.parseObject(jsonStr, Constellation.class);
+            tar = JSON.parseObject(str, Constellation.class);
             //将 [1,2,3]变为 1,2,3
-            //星系
+            //设置星系
             tar.setSystems(
                     StringUtil.handelListInEsiRes(
                             tar.getSystems()));
@@ -189,18 +208,22 @@ public class UniverseServiceImpl implements UniverseService
     {
         String systemsUrl = pre + "systems/";
         String systemsDetailUrl = systemsUrl;
-        String jsonStr;
         System tar;
 
-        List<String> lt = MyRT.restTemplate.getForObject(systemsUrl,
-                List.class,
+        //获取所有id
+        List<String> ids = MyRT.getReqCastIntListToStrList(systemsUrl,
                 params);
-        for (String id : lt)
-        {
 
-            jsonStr = MyRT.getReq(systemsDetailUrl + id + queryParams,
-                    params);
-            tar = JSON.parseObject(jsonStr, System.class);
+        //获取所有system的信息jsonList
+        List<String> jsonList = MyRT.getReqMultiById(systemsDetailUrl,
+                queryParams,
+                params,
+                ids);
+
+        //遍历，处理后存储
+        for (String str : jsonList)
+        {
+            tar = JSON.parseObject(str, System.class);
             //将 [1,2,3]变为 1,2,3
             //星门
             tar.setStargates(
@@ -211,26 +234,30 @@ public class UniverseServiceImpl implements UniverseService
                     StringUtil.handelListInEsiRes(
                             tar.getStations()));
             systemService.save(tar);
-
         }
     }
 
+    /**
+     * 空间站相关
+     */
     @Override
     public void updateStations()
     {
-        String stationDetailUrl = pre163 + "stations/";
-        HashMap<String, Object> localParams = params;
-        String querys = this.queryParams163;
+        String stationDetailUrl = pre + "stations/";
+        //从数据库中获取所有stationIds
         List<String> stationIds = systemService.findAllStationIds();
-        String jsonStr;
 
-        for (String id : stationIds)
+        //获取所有station的信息jsonList
+        List<String> jsonList = MyRT.getReqMultiById(stationDetailUrl,
+                queryParams,
+                params,
+                stationIds);
+
+        //遍历，处理后存储
+        for (String str : jsonList)
         {
-            jsonStr = MyRT.getReq(stationDetailUrl + id + querys,
-                    localParams);
-            stationService.save(JSON.parseObject(jsonStr, Station.class));
+            stationService.save(JSON.parseObject(str, Station.class));
         }
-
     }
 
     @Override
