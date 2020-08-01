@@ -132,19 +132,22 @@ public class UniverseServiceImpl implements UniverseService
     {
         String regionsUrl = pre + "regions/";
         String regionsDetailUrl = regionsUrl;
-        String jsonStr;
         Region tar;
-
-        List<Integer> lt = MyRT.restTemplate.getForObject(regionsUrl,
+        //获取所有id
+        List<String> lt = MyRT.restTemplate.getForObject(regionsUrl,
                 List.class,
                 params);
 
-        List<String> jsonList = MyRT.getReqMultiById()
-        for (int id : lt)
+        //获取所有region的信息list
+        List<String> jsonList = MyRT.getReqMultiById(regionsDetailUrl,
+                queryParams,
+                params,
+                lt);
+
+        //遍历，处理后存储
+        for (String str : jsonList)
         {
-            jsonStr = MyRT.getReq(regionsDetailUrl + id + queryParams,
-                    params);
-            tar = JSON.parseObject(jsonStr, Region.class);
+            tar = JSON.parseObject(str, Region.class);
             //将 [1,2,3]变为 1,2,3
             tar.setConstellations(
                     StringUtil.handelListInEsiRes(
@@ -226,7 +229,8 @@ public class UniverseServiceImpl implements UniverseService
 
         for (String id : stationIds)
         {
-            jsonStr = MyRT.getReq(stationDetailUrl + id + querys, localParams);
+            jsonStr = MyRT.getReq(stationDetailUrl + id + querys,
+                    localParams);
             stationService.save(JSON.parseObject(jsonStr, Station.class));
         }
 

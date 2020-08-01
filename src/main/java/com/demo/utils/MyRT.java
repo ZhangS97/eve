@@ -49,10 +49,11 @@ public class MyRT
     {
         List<List<String>> idList = ListUtils.groupList(ids);
         List<String> resList = new ArrayList<>();
+        MyRT myRT = SpringUtils.getBean(MyRT.class);
         for (List<String> lt : idList)
         {
             resList.addAll(
-                    getReqMultiByIdTask(url,
+                    myRT.getReqMultiByIdTask(url,
                             queryParams,
                             localParams,
                             lt));
@@ -63,15 +64,15 @@ public class MyRT
     /**
      * 单个线程
      */
-    @ove
     @Async
-    static List<String> getReqMultiByIdTask(String url,
+    List<String> getReqMultiByIdTask(String url,
             String queryParams,
             Map localParams,
             List<String> ids)
     {
         String jsonStr;
         List<String> list = new ArrayList<>();
+
         for (String id : ids)
         {
             jsonStr = MyRT.getReq(url + id + queryParams, localParams);
