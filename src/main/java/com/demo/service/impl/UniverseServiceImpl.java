@@ -91,8 +91,6 @@ public class UniverseServiceImpl implements UniverseService
     @Override
     public void updateTypes()
     {
-        HashMap<String, Object> localParams = params;
-        String querys = queryParams163;
         String typesUrl = pre163 + "types/";
 
         List<String> allTypes = getAllIdsByPage(typesUrl,
