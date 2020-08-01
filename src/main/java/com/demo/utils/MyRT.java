@@ -2,11 +2,14 @@ package com.demo.utils;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 public class MyRT
 {
@@ -49,14 +52,24 @@ public class MyRT
     {
         List<List<String>> idList = ListUtils.groupList(ids);
         List<String> resList = new ArrayList<>();
-        MyRT myRT = SpringUtils.getBean(MyRT.class);
+        MyRT myRTProxy = SpringUtils.getBean(MyRT.class);
         for (List<String> lt : idList)
         {
-            resList.addAll(
-                    myRT.getReqMultiByIdTask(url,
-                            queryParams,
-                            localParams,
-                            lt));
+            try
+            {
+                resList.addAll(myRTProxy.getReqMultiByIdTask(url,
+                        queryParams,
+                        localParams,
+                        lt).get());
+            }
+            catch (InterruptedException e)
+            {
+                e.printStackTrace();
+            }
+            catch (ExecutionException e)
+            {
+                e.printStackTrace();
+            }
         }
         return resList;
     }
@@ -65,7 +78,7 @@ public class MyRT
      * 单个线程
      */
     @Async
-    List<String> getReqMultiByIdTask(String url,
+    Future<List<String>> getReqMultiByIdTask(String url,
             String queryParams,
             Map localParams,
             List<String> ids)
@@ -78,7 +91,7 @@ public class MyRT
             jsonStr = MyRT.getReq(url + id + queryParams, localParams);
             list.add(jsonStr);
         }
-        return list;
+        return new AsyncResult<>(list);
     }
 
     public void testGet()
