@@ -132,8 +132,7 @@ public class UniverseServiceImpl implements UniverseService
         String regionsDetailUrl = regionsUrl;
         Region tar;
         //获取所有id
-        List<String> lt = MyRT.restTemplate.getForObject(regionsUrl,
-                List.class,
+        List<String> lt = MyRT.getReqCastIntListToStrList(regionsUrl,
                 params);
 
         //获取所有region的信息list
@@ -146,7 +145,7 @@ public class UniverseServiceImpl implements UniverseService
         for (String str : jsonList)
         {
             tar = JSON.parseObject(str, Region.class);
-            //将 [1,2,3]变为 1,2,3
+            //将 region的Constellations [1,2,3]变为 1,2,3
             tar.setConstellations(
                     StringUtil.handelListInEsiRes(
                             tar.getConstellations()));

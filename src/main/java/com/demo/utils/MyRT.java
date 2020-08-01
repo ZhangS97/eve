@@ -3,6 +3,7 @@ package com.demo.utils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
@@ -10,7 +11,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
+import java.util.stream.Collectors;
 
+@Component
 public class MyRT
 {
     public static RestTemplate restTemplate = new RestTemplate();
@@ -37,6 +40,20 @@ public class MyRT
             break;
         }
         return responseEntity.getBody();
+    }
+
+    /**
+     * getForObject默认返回List<Integer>
+     * 需要通过流的方式转为List<String>
+     */
+    public static List<String> getReqCastIntListToStrList(String url,
+            Map<String, Object> params)
+    {
+        List<Integer> integerList = restTemplate.getForObject(url,
+                List.class,
+                params);
+        return integerList.stream().map(String::valueOf).collect(
+                Collectors.toList());
     }
 
     /**

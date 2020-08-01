@@ -71,11 +71,6 @@
       "defaultValue": 0
     },
     {
-      "name": "esi.universe.all-type-i-d",
-      "type": "java.util.List<java.lang.String>",
-      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
-    },
-    {
       "name": "esi.universe.constellation-service",
       "type": "com.demo.web.bundle.universe.model.service.ConstellationService",
       "sourceType": "com.demo.service.impl.UniverseServiceImpl"
