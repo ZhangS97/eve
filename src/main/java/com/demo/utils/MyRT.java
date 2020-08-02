@@ -100,6 +100,7 @@ public class MyRT
             Map localParams,
             List<String> ids)
     {
+        Log.logger.info(ids.toString());
         String jsonStr;
         List<String> list = new ArrayList<>();
 

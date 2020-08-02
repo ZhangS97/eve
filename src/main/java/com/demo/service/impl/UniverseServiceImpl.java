@@ -3,9 +3,7 @@ package com.demo.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.demo.service.UniverseService;
-import com.demo.utils.ListUtils;
 import com.demo.utils.MyRT;
-import com.demo.utils.SpringUtils;
 import com.demo.utils.StringUtil;
 import com.demo.web.bundle.universe.entity.System;
 import com.demo.web.bundle.universe.entity.*;
@@ -13,7 +11,6 @@ import com.demo.web.bundle.universe.model.service.*;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -88,14 +85,19 @@ public class UniverseServiceImpl implements UniverseService
     /**
      * 在版本更新时调用
      * 例如：
-     * Region,Constellation,System
+     * Region,Constellation,System,Type
      */
     @Override
     public void updateUniverseInfo()
     {
+        //更新天体
         updateRegions();
         updateConstellations();
         updateSystems();
+        //更新人造建筑
+        updateStations();
+        //更新物品
+        updateTypes();
     }
 
     /**
@@ -104,34 +106,25 @@ public class UniverseServiceImpl implements UniverseService
     @Override
     public void updateTypes()
     {
-        String typesUrl = pre163 + "types/";
+        String typesUrl = pre + "types/";
 
-        List<String> allTypes = getAllIdsByPage(typesUrl,
-                queryParams163,
+        //获取所有ids
+        List<String> ids = getAllIdsByPage(typesUrl,
+                queryParams,
                 params);
 
-        List<List<String>> typeIDList = ListUtils.groupList(allTypes);
-        UniverseServiceImpl universeServiceImplProxy = SpringUtils.getBean(
-                UniverseServiceImpl.class);
-        for (List<String> lt : typeIDList)
-        {
-            universeServiceImplProxy.updateTypesTask(lt);
-        }
-    }
+        //获取所有type的信息jsonList
+        List<String> jsonList = MyRT.getReqMultiById(typesUrl,
+                queryParams,
+                params,
+                ids);
 
-    @Async
-    public void updateTypesTask(List<String> types)
-    {
-        HashMap<String, Object> localParams = params;
-        String querys = queryParams163;
-        String typesDetailUrl = pre163 + "types/";
-        String jsonStr;
-
-        for (String id : types)
+        //遍历，处理后存储
+        for (String str : jsonList)
         {
-            jsonStr = MyRT.getReq(typesDetailUrl + id + querys, localParams);
-            typeService.save(JSON.parseObject(jsonStr, Type.class));
+            typeService.save(JSON.parseObject(str, Type.class));
         }
+
     }
 
     /**

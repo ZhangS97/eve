@@ -18,7 +18,7 @@ import java.util.Enumeration;
 @Component
 public class Log
 {
-    private static final Logger logger = LoggerFactory.getLogger(Log.class);
+    public static final Logger logger = LoggerFactory.getLogger(Log.class);
 
     //private Logger logger = LoggerFactory.getLogger(getClass());
     @Pointcut("execution(public * com.demo.controllers..*.*(..))")
