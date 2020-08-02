@@ -185,7 +185,7 @@ public class UniverseServiceImpl implements UniverseService
         {
             tar = JSON.parseObject(str, Constellation.class);
             //将 [1,2,3]变为 1,2,3
-            //设置星系
+            //设置星座
             tar.setSystems(
                     StringUtil.handelListInEsiRes(
                             tar.getSystems()));
