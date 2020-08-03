@@ -1,16 +1,19 @@
 package com.demo.utils;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.AsyncResult;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 public class MyRT
 {
     public static RestTemplate restTemplate = new RestTemplate();
@@ -65,17 +68,25 @@ public class MyRT
             List<String> ids)
     {
         List<List<String>> idList = ListUtils.groupList(ids);
+
         List<String> resList = new ArrayList<>();
-        AsyncUtil asyncUtil = SpringUtils.getBean(AsyncUtil.class);
+        List<Future<List<String>>> futures = new ArrayList<>();
+        MyRT myRTProxy = SpringUtils.getBean(MyRT.class);
         for (List<String> lt : idList)
         {
-            Log.logger.info(lt.toString());
+//            Log.logger.info(lt.toString());
+            System.out.println(lt);
+            futures.add(myRTProxy.getReqMultiByIdTask(url,
+                    queryParams,
+                    localParams,
+                    lt));
+        }
+
+        for (Future<List<String>> future : futures)
+        {
             try
             {
-                resList.addAll(asyncUtil.getReqMultiByIdTask(url,
-                        queryParams,
-                        localParams,
-                        lt).get());
+                resList.addAll(future.get());
             }
             catch (InterruptedException e)
             {
@@ -85,8 +96,28 @@ public class MyRT
             {
                 e.printStackTrace();
             }
+
         }
         return resList;
+    }
+
+    @Async
+    Future<List<String>> getReqMultiByIdTask(String url,
+            String queryParams,
+            Map localParams,
+            List<String> ids)
+    {
+        System.out.println(ids);
+        System.out.println(System.currentTimeMillis());
+        String jsonStr;
+        List<String> list = new ArrayList<>();
+
+        for (String id : ids)
+        {
+            jsonStr = MyRT.getReq(url + id + queryParams, localParams);
+            list.add(jsonStr);
+        }
+        return new AsyncResult<>(list);
     }
 
     public void testGet()
