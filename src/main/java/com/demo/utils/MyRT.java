@@ -70,18 +70,19 @@ public class MyRT
         List<List<String>> idList = ListUtils.groupList(ids);
 
         List<String> resList = new ArrayList<>();
-        List<Future<List<String>>> futures = new ArrayList<>();
         MyRT myRTProxy = SpringUtils.getBean(MyRT.class);
+
+        //为了异步操作用Future接受
+        List<Future<List<String>>> futures = new ArrayList<>();
         for (List<String> lt : idList)
         {
-//            Log.logger.info(lt.toString());
-            System.out.println(lt);
             futures.add(myRTProxy.getReqMultiByIdTask(url,
                     queryParams,
                     localParams,
                     lt));
         }
 
+        //从Future取值
         for (Future<List<String>> future : futures)
         {
             try
@@ -107,8 +108,7 @@ public class MyRT
             Map localParams,
             List<String> ids)
     {
-        System.out.println(ids);
-        System.out.println(System.currentTimeMillis());
+        Log.logger.info(ids.toString());
         String jsonStr;
         List<String> list = new ArrayList<>();
 
