@@ -2,16 +2,20 @@ package com.demo.web.bundle.market.cache;
 
 import com.alibaba.fastjson.JSON;
 import com.demo.component.CacheableTree;
+import com.demo.utils.ListUtils;
+import com.demo.utils.SpringUtils;
 import com.demo.web.bundle.market.entity.MarketGroup;
 import com.demo.web.bundle.market.model.service.MarketGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Future;
 
 @Component(value = "marketGroupCache")
 public class MarketGroupCache extends CacheableTree
@@ -29,13 +33,32 @@ public class MarketGroupCache extends CacheableTree
 
     public void doLoad()
     {
-        List<MarketGroup> marketGroupList = service.findAll();
+        List<List<MarketGroup>> allMarketGroups = ListUtils.groupList(service.findAll());
+
+        List<Future<Map>> futures = new ArrayList<>();
+        MarketGroupCache marketGroupCacheProxy = SpringUtils.getBean(
+                MarketGroupCache.class);
 
         //存放父id及其对应的下一层儿子id，双层树状结构
         Map<String, List> map = new HashMap<>();
 
         List<String> list = new ArrayList<>();
-        for (MarketGroup marketGroup : marketGroupList)
+        for (List<MarketGroup> marketGroupList : allMarketGroups)
+        {
+            futures.add(marketGroupCacheProxy.doLoadTask(marketGroupList));
+        }
+
+        for (String str : map.keySet())
+        {
+            saveOne(str, map.get(str).toString());
+        }
+
+    }
+
+    @Async
+    Future<Map> doLoadTask(List<MarketGroup> marketGroups)
+    {
+        for (MarketGroup marketGroup : marketGroups)
         {
             //根据父id 查看是否存在兄弟list
             list = map.get(marketGroup.getParentGroupId());
@@ -63,12 +86,5 @@ public class MarketGroupCache extends CacheableTree
                     marketGroup.getParentGroupId());
 
         }
-
-        for (String str : map.keySet())
-        {
-            saveOne(str, map.get(str).toString());
-        }
-
     }
-
 }

@@ -24,12 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/controllers/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/controllers/MarketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/utils/MyRT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/utils/MyRT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/MarketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/MarketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/MarketServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +290,7 @@
       <workItem from="1596414334464" duration="22000" />
       <workItem from="1596461920194" duration="3915000" />
       <workItem from="1596510163657" duration="10590000" />
-      <workItem from="1596537312249" duration="4188000" />
+      <workItem from="1596537312249" duration="6960000" />
     </task>
     <task id="LOCAL-00001" summary="@Data替换@ToString">
       <created>1594042958153</created>
@@ -514,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596539834095</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="完成MarketGroup多线程请求更新">
+      <created>1596541709422</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1596541709422</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -566,7 +568,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="@Data替换@ToString" />
     <MESSAGE value="新增cacheable类" />
     <MESSAGE value="新增cacheableTree类" />
     <MESSAGE value="update marketgroupcache" />
@@ -591,7 +592,8 @@
     <MESSAGE value="完成对restTemplate返回状态值做判断，比如504，做出相应的处理" />
     <MESSAGE value="完成region Constellation 多线程缓存" />
     <MESSAGE value="完成Station 多线程缓存" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成Station 多线程缓存" />
+    <MESSAGE value="完成MarketGroup多线程请求更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成MarketGroup多线程请求更新" />
   </component>
   <component name="WindowStateProjectService">
     <state x="700" y="311" key="#Customize_Threads_View" timestamp="1596541435127">
@@ -606,10 +608,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="659" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1596520804644" />
-    <state x="457" y="28" key="CommitChangelistDialog2" timestamp="1596539833412">
+    <state x="457" y="28" key="CommitChangelistDialog2" timestamp="1596541708499">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="457" y="28" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1596539833412" />
+    <state x="457" y="28" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1596541708499" />
     <state width="1351" height="299" key="GridCell.Tab.0.bottom" timestamp="1596541522065">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -662,10 +664,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="355" y="105" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1596109919850" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1596539836589">
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1596541710618">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1596539836589" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1596541710618" />
     <state x="399" y="190" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596524713141">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
