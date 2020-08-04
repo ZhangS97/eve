@@ -123,6 +123,11 @@
       "sourceType": "com.demo.service.impl.UniverseServiceImpl"
     },
     {
+      "name": "esi.universe.station-cache",
+      "type": "com.demo.web.bundle.universe.cache.StationCache",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
       "name": "esi.universe.station-service",
       "type": "com.demo.web.bundle.universe.model.service.StationService",
       "sourceType": "com.demo.service.impl.UniverseServiceImpl"

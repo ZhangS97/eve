@@ -25,14 +25,10 @@
     <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/UniverseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/UniverseService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/cache/MarketGroupCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/ConstellationCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/ConstellationCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/RegionCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/utils/MyRT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/utils/MyRT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/StationCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/StationCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/SystemCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/SystemCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/TypeCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/cache/TypeCache.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,20 +162,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="eveApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="eveApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="eve" />
       <extension name="coverage">
         <pattern>
@@ -188,13 +171,15 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.demo.eveApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.eveApplication (1)" />
+        <item itemvalue="Spring Boot.eveApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +283,8 @@
       <workItem from="1596277757202" duration="18916000" />
       <workItem from="1596414334464" duration="22000" />
       <workItem from="1596461920194" duration="3915000" />
-      <workItem from="1596510163657" duration="9624000" />
+      <workItem from="1596510163657" duration="10590000" />
+      <workItem from="1596537312249" duration="2396000" />
     </task>
     <task id="LOCAL-00001" summary="@Data替换@ToString">
       <created>1594042958153</created>
@@ -503,7 +489,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596516399284</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="完成region Constellation 多线程缓存">
+      <created>1596524808249</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1596524808249</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -578,73 +571,78 @@
     <MESSAGE value="添加AsyncUtil" />
     <MESSAGE value="对MyRT优化，删除system.out.print，&#10;下一步需要对restTemplate返回状态值做判断，比如504" />
     <MESSAGE value="完成对restTemplate返回状态值做判断，比如504，做出相应的处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成对restTemplate返回状态值做判断，比如504，做出相应的处理" />
+    <MESSAGE value="完成region Constellation 多线程缓存" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成region Constellation 多线程缓存" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="309" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596537674783">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="309" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1596537674783" />
     <state x="659" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1596520804644">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="659" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1596520804644" />
-    <state x="457" y="28" key="CommitChangelistDialog2" timestamp="1596516398682">
+    <state x="457" y="28" key="CommitChangelistDialog2" timestamp="1596524807560">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="457" y="28" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1596516398682" />
-    <state width="1143" height="299" key="GridCell.Tab.0.bottom" timestamp="1596524730836">
+    <state x="457" y="28" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1596524807560" />
+    <state width="1143" height="299" key="GridCell.Tab.0.bottom" timestamp="1596539524200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596524730836" />
-    <state width="1143" height="299" key="GridCell.Tab.0.center" timestamp="1596524730836">
+    <state width="1143" height="299" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596539524200" />
+    <state width="1143" height="299" key="GridCell.Tab.0.center" timestamp="1596539524200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1596524730836" />
-    <state width="1143" height="299" key="GridCell.Tab.0.left" timestamp="1596524730836">
+    <state width="1143" height="299" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1596539524200" />
+    <state width="1143" height="299" key="GridCell.Tab.0.left" timestamp="1596539524200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1596524730836" />
-    <state width="1143" height="299" key="GridCell.Tab.0.right" timestamp="1596524730836">
+    <state width="1143" height="299" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1596539524200" />
+    <state width="1143" height="299" key="GridCell.Tab.0.right" timestamp="1596539524200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1596524730836" />
-    <state width="1143" height="299" key="GridCell.Tab.1.bottom" timestamp="1596524730836">
+    <state width="1143" height="299" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1596539524200" />
+    <state width="1143" height="299" key="GridCell.Tab.1.bottom" timestamp="1596539524200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596524730836" />
-    <state width="1143" height="299" key="GridCell.Tab.1.center" timestamp="1596524730836">
+    <state width="1143" height="299" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596539524200" />
+    <state width="1143" height="299" key="GridCell.Tab.1.center" timestamp="1596539524200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1596524730836" />
-    <state width="1143" height="299" key="GridCell.Tab.1.left" timestamp="1596524730836">
+    <state width="1143" height="299" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1596539524200" />
+    <state width="1143" height="299" key="GridCell.Tab.1.left" timestamp="1596539524200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1596524730836" />
-    <state width="1143" height="299" key="GridCell.Tab.1.right" timestamp="1596524730836">
+    <state width="1143" height="299" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1596539524200" />
+    <state width="1143" height="299" key="GridCell.Tab.1.right" timestamp="1596539524200">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1596524730836" />
-    <state width="1143" height="299" key="GridCell.Tab.2.bottom" timestamp="1596524717702">
+    <state width="1143" height="299" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1596539524200" />
+    <state width="1143" height="299" key="GridCell.Tab.2.bottom" timestamp="1596539524201">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596524717702" />
-    <state width="1143" height="299" key="GridCell.Tab.2.center" timestamp="1596524717702">
+    <state width="1143" height="299" key="GridCell.Tab.2.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596539524201" />
+    <state width="1143" height="299" key="GridCell.Tab.2.center" timestamp="1596539524201">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1596524717702" />
-    <state width="1143" height="299" key="GridCell.Tab.2.left" timestamp="1596524717702">
+    <state width="1143" height="299" key="GridCell.Tab.2.center/0.0.1707.920@0.0.1707.920" timestamp="1596539524201" />
+    <state width="1143" height="299" key="GridCell.Tab.2.left" timestamp="1596539524201">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1596524717702" />
-    <state width="1143" height="299" key="GridCell.Tab.2.right" timestamp="1596524717702">
+    <state width="1143" height="299" key="GridCell.Tab.2.left/0.0.1707.920@0.0.1707.920" timestamp="1596539524201" />
+    <state width="1143" height="299" key="GridCell.Tab.2.right" timestamp="1596539524201">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="299" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1596524717702" />
+    <state width="1143" height="299" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1596539524201" />
     <state x="355" y="105" key="SettingsEditor" timestamp="1596109919850">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="355" y="105" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1596109919850" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1596516403550">
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1596524809409">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1596516403550" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1596524809409" />
     <state x="399" y="190" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596524713141">
       <screen x="0" y="0" width="1707" height="920" />
     </state>

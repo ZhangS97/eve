@@ -2,9 +2,12 @@ package com.demo.web.bundle.universe.cache;
 
 import com.alibaba.fastjson.JSON;
 import com.demo.component.Cacheable;
+import com.demo.utils.ListUtils;
+import com.demo.utils.SpringUtils;
 import com.demo.web.bundle.universe.entity.System;
 import com.demo.web.bundle.universe.model.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -23,14 +26,25 @@ public class SystemCache extends Cacheable
 
     public void doLoad()
     {
-        List<System> systems = systemService.findAll();
+        List<List<System>> allSystems = ListUtils.groupList(systemService.findAll());
+        SystemCache systemCacheProxy = SpringUtils.getBean(SystemCache.class);
+
+        for (List<System> systems : allSystems)
+        {
+            systemCacheProxy.doLoadTask(systems);
+        }
+    }
+
+    @Async
+    void doLoadTask(List<System> systems)
+    {
         for (System system : systems)
         {
+            //存储本身
             saveOne(KEY_ID + system.getSystemId(), JSON.toJSONString(system));
-
+            //存储下属空间站
             saveOne(KEY_STATION_ID + system.getSystemId(),
                     system.getStations());
         }
-
     }
 }

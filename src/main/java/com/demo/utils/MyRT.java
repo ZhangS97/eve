@@ -34,11 +34,12 @@ public class MyRT
             }
             catch (Exception e)
             {
-                e.printStackTrace();
+                Log.logger.info(e.toString());
                 continue;
             }
             if (responseEntity.getStatusCode().is5xxServerError())
             {
+                Log.logger.info("5xx Error");
                 continue;
             }
             break;

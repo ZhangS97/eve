@@ -3,12 +3,10 @@ package com.demo.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.demo.service.UniverseService;
+import com.demo.utils.Log;
 import com.demo.utils.MyRT;
 import com.demo.utils.StringUtil;
-import com.demo.web.bundle.universe.cache.ConstellationCache;
-import com.demo.web.bundle.universe.cache.RegionCache;
-import com.demo.web.bundle.universe.cache.SystemCache;
-import com.demo.web.bundle.universe.cache.TypeCache;
+import com.demo.web.bundle.universe.cache.*;
 import com.demo.web.bundle.universe.entity.System;
 import com.demo.web.bundle.universe.entity.*;
 import com.demo.web.bundle.universe.model.service.*;
@@ -59,35 +57,6 @@ public class UniverseServiceImpl implements UniverseService
     private static String queryParams163 = "/?datasource={datasource163}&language={language}&page={page}";
 
     /**
-     * 根据 参数 自动 获取该类型全部的id
-     *
-     * @param url         链接
-     * @param queryParams 待填充的参数模板
-     * @param localParams 实际参数
-     */
-    public List<String> getAllIdsByPage(String url, String queryParams,
-            Map<String, Object> localParams)
-    {
-        List<String> ids = new ArrayList<>();
-        String jsonSting;
-        //起始页码为1
-        int pageNum = 1;
-        while (true)
-        {
-            localParams.put("page", pageNum);
-            jsonSting = MyRT.getReq(url + queryParams, localParams);
-            if (jsonSting.equals("[]"))
-            {
-                break;
-            }
-            ids.addAll(JSONArray.parseArray(jsonSting)
-                    .toJavaList(String.class));
-            pageNum++;
-        }
-        return ids;
-    }
-
-    /**
      * 在版本更新时调用
      * 例如：
      * Region,Constellation,System,Type
@@ -115,42 +84,26 @@ public class UniverseServiceImpl implements UniverseService
     SystemCache systemCache;
 
     @Autowired
+    StationCache stationCache;
+
+    @Autowired
     TypeCache typeCache;
 
+    /**
+     * 初始化缓存
+     * 包括 Region Constellation System Type
+     */
     @Override
     public void initUniverseCache()
     {
+        //缓存天体
         regionCache.doLoad();
         constellationCache.doLoad();
         systemCache.doLoad();
+        //缓存人造建筑
+        stationCache.doLoad();
+        //缓存物品
         typeCache.doLoad();
-    }
-
-    /**
-     * 遍历每个typeid并查询详细数据，存入数据库
-     */
-    @Override
-    public void updateTypes()
-    {
-        String typesUrl = pre + "types/";
-
-        //获取所有ids
-        List<String> ids = getAllIdsByPage(typesUrl,
-                queryParams,
-                params);
-
-        //获取所有type的信息jsonList
-        List<String> jsonList = MyRT.getReqMultiById(typesUrl,
-                queryParams,
-                params,
-                ids);
-
-        //遍历，处理后存储
-        for (String str : jsonList)
-        {
-            typeService.save(JSON.parseObject(str, Type.class));
-        }
-
     }
 
     /**
@@ -254,6 +207,7 @@ public class UniverseServiceImpl implements UniverseService
                             tar.getStations()));
             systemService.save(tar);
         }
+        Log.logger.info("end");
     }
 
     /**
@@ -279,10 +233,66 @@ public class UniverseServiceImpl implements UniverseService
         }
     }
 
+    /**
+     * 遍历每个typeid并查询详细数据，存入数据库
+     */
+    @Override
+    public void updateTypes()
+    {
+        String typesUrl = pre + "types/";
+
+        //获取所有ids
+        List<String> ids = getAllIdsByPage(typesUrl,
+                queryParams,
+                params);
+
+        //获取所有type的信息jsonList
+        List<String> jsonList = MyRT.getReqMultiById(typesUrl,
+                queryParams,
+                params,
+                ids);
+
+        //遍历，处理后存储
+        for (String str : jsonList)
+        {
+            typeService.save(JSON.parseObject(str, Type.class));
+        }
+
+    }
+
     @Override
     public List<String> getHighSecureRegionsID()
     {
         return regionService.getHighSecureRegionsID();
+    }
+
+    /**
+     * 根据 参数 自动 获取该类型全部的id
+     *
+     * @param url         链接
+     * @param queryParams 待填充的参数模板
+     * @param localParams 实际参数
+     */
+    public List<String> getAllIdsByPage(String url, String queryParams,
+            Map<String, Object> localParams)
+    {
+        List<String> ids = new ArrayList<>();
+        String jsonSting;
+        //起始页码为1
+        int pageNum = 1;
+        while (true)
+        {
+            localParams.put("page", pageNum);
+            jsonSting = MyRT.getReq(url + queryParams, localParams);
+            if (jsonSting.equals("[]"))
+            {
+                break;
+            }
+            ids.addAll(JSONArray.parseArray(jsonSting)
+                    .toJavaList(String.class));
+            pageNum++;
+        }
+        return ids;
     }
 
 }
