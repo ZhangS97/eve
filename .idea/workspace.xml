@@ -22,13 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="对MyRT优化，删除system.out.print，&#10;下一步需要对restTemplate返回状态值做判断，比如504">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/config/AsyncConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/config/AsyncConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/eveApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/DogmaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/DogmaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/UniverseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/UniverseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/service/impl/UniverseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/utils/MyRT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/utils/MyRT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/market/model/service/impl/MarketServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/RegionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/RegionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/RegionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/web/bundle/universe/model/service/impl/RegionServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,12 +115,6 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="30" />
-    <option name="width" value="1890" />
-    <option name="height" value="960" />
-  </component>
   <component name="ProjectId" id="1fPBdDwdquo4P43l1qsrIJk07Ty" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -167,13 +164,15 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -197,7 +196,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringBeansView">
     <option name="beanDetailsProportion" value="0.3" />
   </component>
@@ -297,6 +296,7 @@
       <workItem from="1596277757202" duration="18916000" />
       <workItem from="1596414334464" duration="22000" />
       <workItem from="1596461920194" duration="3915000" />
+      <workItem from="1596510163657" duration="5129000" />
     </task>
     <task id="LOCAL-00001" summary="@Data替换@ToString">
       <created>1594042958153</created>
@@ -487,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596349011214</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="对MyRT优化，删除system.out.print，&#10;下一步需要对restTemplate返回状态值做判断，比如504">
+      <created>1596504478580</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1596504478580</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -500,7 +507,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -560,49 +567,50 @@
     <MESSAGE value="完成updateRegion的多线程操作" />
     <MESSAGE value="完成Region,Constellation,System的更新功能" />
     <MESSAGE value="添加AsyncUtil" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加AsyncUtil" />
+    <MESSAGE value="对MyRT优化，删除system.out.print，&#10;下一步需要对restTemplate返回状态值做判断，比如504" />
+    <option name="LAST_COMMIT_MESSAGE" value="对MyRT优化，删除system.out.print，&#10;下一步需要对restTemplate返回状态值做判断，比如504" />
   </component>
   <component name="WindowStateProjectService">
     <state x="659" y="162" key="#com.intellij.ide.util.MemberChooser" timestamp="1596109218537">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="659" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1596109218537" />
-    <state x="457" y="28" key="CommitChangelistDialog2" timestamp="1596183784062">
+    <state x="457" y="28" key="CommitChangelistDialog2" timestamp="1596512614048">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="457" y="28" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1596183784062" />
-    <state width="1143" height="242" key="GridCell.Tab.0.bottom" timestamp="1596504353782">
+    <state x="457" y="28" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1596512614048" />
+    <state width="1143" height="242" key="GridCell.Tab.0.bottom" timestamp="1596504521979">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596504353782" />
-    <state width="1143" height="242" key="GridCell.Tab.0.center" timestamp="1596504353781">
+    <state width="1143" height="242" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596504521979" />
+    <state width="1143" height="242" key="GridCell.Tab.0.center" timestamp="1596504521979">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1596504353781" />
-    <state width="1143" height="242" key="GridCell.Tab.0.left" timestamp="1596504353781">
+    <state width="1143" height="242" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1596504521979" />
+    <state width="1143" height="242" key="GridCell.Tab.0.left" timestamp="1596504521979">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1596504353781" />
-    <state width="1143" height="242" key="GridCell.Tab.0.right" timestamp="1596504353782">
+    <state width="1143" height="242" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1596504521979" />
+    <state width="1143" height="242" key="GridCell.Tab.0.right" timestamp="1596504521979">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1596504353782" />
-    <state width="1143" height="242" key="GridCell.Tab.1.bottom" timestamp="1596504353782">
+    <state width="1143" height="242" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1596504521979" />
+    <state width="1143" height="242" key="GridCell.Tab.1.bottom" timestamp="1596504521979">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="242" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596504353782" />
-    <state width="1143" height="242" key="GridCell.Tab.1.center" timestamp="1596504353782">
+    <state width="1143" height="242" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1596504521979" />
+    <state width="1143" height="242" key="GridCell.Tab.1.center" timestamp="1596504521979">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="242" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1596504353782" />
-    <state width="1143" height="242" key="GridCell.Tab.1.left" timestamp="1596504353782">
+    <state width="1143" height="242" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1596504521979" />
+    <state width="1143" height="242" key="GridCell.Tab.1.left" timestamp="1596504521979">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="242" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1596504353782" />
-    <state width="1143" height="242" key="GridCell.Tab.1.right" timestamp="1596504353782">
+    <state width="1143" height="242" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1596504521979" />
+    <state width="1143" height="242" key="GridCell.Tab.1.right" timestamp="1596504521979">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state width="1143" height="242" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1596504353782" />
+    <state width="1143" height="242" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1596504521979" />
     <state width="1143" height="242" key="GridCell.Tab.2.bottom" timestamp="1596183802613">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -623,10 +631,10 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="355" y="105" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1596109919850" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1596504360484">
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1596504480437">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1596504360484" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1596504480437" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

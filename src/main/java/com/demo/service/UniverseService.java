@@ -17,6 +17,6 @@ public interface UniverseService
 
     void updateStations();
 
-    List<String> showHighSecureRegionsID();
+    List<String> getHighSecureRegionsID();
 
 }

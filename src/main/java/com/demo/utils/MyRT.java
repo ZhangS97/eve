@@ -37,6 +37,10 @@ public class MyRT
                 e.printStackTrace();
                 continue;
             }
+            if (responseEntity.getStatusCode().is5xxServerError())
+            {
+                continue;
+            }
             break;
         }
         return responseEntity.getBody();

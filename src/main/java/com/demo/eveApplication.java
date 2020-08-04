@@ -34,9 +34,7 @@ public class eveApplication implements CommandLineRunner
     {
 //        MarketGroupCache marketGroupCache = new MarketGroupCache();
 //        marketGroupCache.doLoad();
-        service.updateRegions();
-        service.updateConstellations();
-        service.updateSystems();
+        service.updateUniverseInfo();
     }
 
 }

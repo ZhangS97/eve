@@ -71,7 +71,7 @@ public class MarketServiceImpl implements MarketService
     @Override
     public void updateMarketOrders()
     {
-        List<String> regionID = universeService.showHighSecureRegionsID();
+        List<String> regionID = universeService.getHighSecureRegionsID();
         List<List<String>> regionIDList = ListUtils.groupList(regionID);
         MarketServiceImpl marketServiceImplProxy = SpringUtils.getBean(
                 MarketServiceImpl.class);

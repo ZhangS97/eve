@@ -2,7 +2,8 @@ package com.demo.service;
 
 import java.util.List;
 
-public interface DogmaService {
+public interface DogmaService
+{
     /*
      *Attributes service begin
      *
@@ -17,5 +18,8 @@ public interface DogmaService {
      * */
     void updateEffects();
 
+    /**
+     *
+     */
     List<String> getAllEffectIds();
 }

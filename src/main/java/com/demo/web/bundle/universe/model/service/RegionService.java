@@ -14,7 +14,7 @@ public interface RegionService
 {
     void save(Region region);
 
-    List<String> showHighSecureRegionsID();
+    List<String> getHighSecureRegionsID();
 
     List<Region> findAll();
 }

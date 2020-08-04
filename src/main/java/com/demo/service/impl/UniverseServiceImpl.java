@@ -55,10 +55,11 @@ public class UniverseServiceImpl implements UniverseService
     private static String queryParams163 = "/?datasource={datasource163}&language={language}&page={page}";
 
     /**
-     * @Param url
-     * @Param queryParams
-     * @Param localParams
      * 根据 参数 自动 获取该类型全部的id
+     *
+     * @param url         链接
+     * @param queryParams 待填充的参数模板
+     * @param localParams 实际参数
      */
     public List<String> getAllIdsByPage(String url, String queryParams,
             Map<String, Object> localParams)
@@ -254,9 +255,9 @@ public class UniverseServiceImpl implements UniverseService
     }
 
     @Override
-    public List<String> showHighSecureRegionsID()
+    public List<String> getHighSecureRegionsID()
     {
-        return regionService.showHighSecureRegionsID();
+        return regionService.getHighSecureRegionsID();
     }
 
 }

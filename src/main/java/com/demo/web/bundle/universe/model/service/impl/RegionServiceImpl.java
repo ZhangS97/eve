@@ -23,7 +23,7 @@ public class RegionServiceImpl implements RegionService
     @Resource
     private RegionDao dao;
 
-    public List<String> showHighSecureRegionsID()
+    public List<String> getHighSecureRegionsID()
     {
         Sort sort = Sort.by(Sort.Direction.ASC, "regionId");
         Pageable pageable = PageRequest.of(0, 67, sort);
