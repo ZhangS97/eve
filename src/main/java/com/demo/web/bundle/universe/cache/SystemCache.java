@@ -5,9 +5,11 @@ import com.demo.component.Cacheable;
 import com.demo.web.bundle.universe.entity.System;
 import com.demo.web.bundle.universe.model.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class SystemCache extends Cacheable
 {
     //根据systemId存储对应system

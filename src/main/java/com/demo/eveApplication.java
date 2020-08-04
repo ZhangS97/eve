@@ -1,7 +1,8 @@
 package com.demo;
 
-import com.demo.service.UniverseService;
 import com.demo.web.bundle.market.cache.MarketGroupCache;
+import com.demo.web.bundle.universe.cache.ConstellationCache;
+import com.demo.web.bundle.universe.cache.RegionCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,9 +15,9 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 public class eveApplication implements CommandLineRunner
 {
-    @Autowired
+//    @Autowired
 //    DogmaService service;
-    UniverseService service;
+//    UniverseService service;
 //            RegionService service;
 //            MarketService service;
 //            MarketGroupService service;
@@ -29,12 +30,21 @@ public class eveApplication implements CommandLineRunner
     @Autowired
     MarketGroupCache marketGroupCache;
 
+    @Autowired
+    RegionCache regionCache;
+
+    @Autowired
+    ConstellationCache constellationCache;
+
     @Override
     public void run(String... args) throws Exception
     {
-//        MarketGroupCache marketGroupCache = new MarketGroupCache();
 //        marketGroupCache.doLoad();
-        service.updateUniverseInfo();
+        long t = System.currentTimeMillis();
+        regionCache.doLoad();
+        constellationCache.doLoad();
+        System.out.println(System.currentTimeMillis() - t);
+//        service.updateUniverseInfo();
     }
 
 }

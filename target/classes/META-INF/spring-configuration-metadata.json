@@ -71,8 +71,18 @@
       "defaultValue": 0
     },
     {
+      "name": "esi.universe.constellation-cache",
+      "type": "com.demo.web.bundle.universe.cache.ConstellationCache",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
       "name": "esi.universe.constellation-service",
       "type": "com.demo.web.bundle.universe.model.service.ConstellationService",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.high-secure-regions-i-d",
+      "type": "java.util.List<java.lang.String>",
       "sourceType": "com.demo.service.impl.UniverseServiceImpl"
     },
     {
@@ -103,6 +113,11 @@
       "defaultValue": "\/?datasource={datasource163}&language={language}&page={page}"
     },
     {
+      "name": "esi.universe.region-cache",
+      "type": "com.demo.web.bundle.universe.cache.RegionCache",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
       "name": "esi.universe.region-service",
       "type": "com.demo.web.bundle.universe.model.service.RegionService",
       "sourceType": "com.demo.service.impl.UniverseServiceImpl"
@@ -110,6 +125,11 @@
     {
       "name": "esi.universe.station-service",
       "type": "com.demo.web.bundle.universe.model.service.StationService",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
+    },
+    {
+      "name": "esi.universe.system-cache",
+      "type": "com.demo.web.bundle.universe.cache.SystemCache",
       "sourceType": "com.demo.service.impl.UniverseServiceImpl"
     },
     {
@@ -122,6 +142,11 @@
       "type": "java.lang.Integer",
       "sourceType": "com.demo.service.impl.UniverseServiceImpl",
       "defaultValue": 0
+    },
+    {
+      "name": "esi.universe.type-cache",
+      "type": "com.demo.web.bundle.universe.cache.TypeCache",
+      "sourceType": "com.demo.service.impl.UniverseServiceImpl"
     },
     {
       "name": "esi.universe.type-service",

@@ -5,9 +5,11 @@ import com.demo.component.Cacheable;
 import com.demo.web.bundle.universe.entity.Station;
 import com.demo.web.bundle.universe.model.service.StationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class StationCache extends Cacheable
 {
     //根据stationId存储对应station

@@ -7,6 +7,8 @@ public interface UniverseService
 
     void updateUniverseInfo();
 
+    void initUniverseCache();
+
     void updateTypes();
 
     void updateRegions();

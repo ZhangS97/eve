@@ -5,9 +5,11 @@ import com.demo.component.Cacheable;
 import com.demo.web.bundle.universe.entity.Type;
 import com.demo.web.bundle.universe.model.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
+@Component
 public class TypeCache extends Cacheable
 {
 

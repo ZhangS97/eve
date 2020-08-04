@@ -2,12 +2,17 @@ package com.demo.web.bundle.universe.cache;
 
 import com.alibaba.fastjson.JSON;
 import com.demo.component.Cacheable;
+import com.demo.utils.ListUtils;
+import com.demo.utils.SpringUtils;
 import com.demo.web.bundle.universe.entity.Region;
 import com.demo.web.bundle.universe.model.service.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class RegionCache extends Cacheable
 {
     //根据regionId存储对应region
@@ -21,12 +26,23 @@ public class RegionCache extends Cacheable
 
     public void doLoad()
     {
-        List<Region> allRegions = regionService.findAll();
+        List<List<Region>> allRegions = ListUtils.groupList(regionService.findAll());
+        RegionCache regionCacheProxy = SpringUtils.getBean(RegionCache.class);
 
-        for (Region region : allRegions)
+        for (List<Region> regions : allRegions)
+        {
+            regionCacheProxy.doLoadTask(regions);
+        }
+    }
+
+    @Async
+    void doLoadTask(List<Region> regions)
+    {
+        for (Region region : regions)
         {
             //存储本身
-            saveOne(KEY_ID + region.getRegionId(), JSON.toJSONString(region));
+            saveOne(KEY_ID + region.getRegionId(),
+                    JSON.toJSONString(region));
             //存储constellationIds
             saveOne(KEY_CONSTELLATION_ID + region.getRegionId(),
                     region.getConstellations());

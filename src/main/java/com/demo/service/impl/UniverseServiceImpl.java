@@ -5,6 +5,10 @@ import com.alibaba.fastjson.JSONArray;
 import com.demo.service.UniverseService;
 import com.demo.utils.MyRT;
 import com.demo.utils.StringUtil;
+import com.demo.web.bundle.universe.cache.ConstellationCache;
+import com.demo.web.bundle.universe.cache.RegionCache;
+import com.demo.web.bundle.universe.cache.SystemCache;
+import com.demo.web.bundle.universe.cache.TypeCache;
 import com.demo.web.bundle.universe.entity.System;
 import com.demo.web.bundle.universe.entity.*;
 import com.demo.web.bundle.universe.model.service.*;
@@ -99,6 +103,27 @@ public class UniverseServiceImpl implements UniverseService
         updateStations();
         //更新物品
         updateTypes();
+    }
+
+    @Autowired
+    RegionCache regionCache;
+
+    @Autowired
+    ConstellationCache constellationCache;
+
+    @Autowired
+    SystemCache systemCache;
+
+    @Autowired
+    TypeCache typeCache;
+
+    @Override
+    public void initUniverseCache()
+    {
+        regionCache.doLoad();
+        constellationCache.doLoad();
+        systemCache.doLoad();
+        typeCache.doLoad();
     }
 
     /**
