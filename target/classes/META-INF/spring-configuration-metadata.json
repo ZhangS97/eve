@@ -7,8 +7,8 @@
     },
     {
       "name": "esi.market",
-      "type": "com.demo.web.bundle.market.model.service.impl.MarketServiceImpl",
-      "sourceType": "com.demo.web.bundle.market.model.service.impl.MarketServiceImpl"
+      "type": "com.demo.service.impl.MarketServiceImpl",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl"
     },
     {
       "name": "esi.universe",
@@ -69,6 +69,42 @@
       "type": "java.lang.Integer",
       "sourceType": "com.demo.service.impl.DogmaServiceImpl",
       "defaultValue": 0
+    },
+    {
+      "name": "esi.market.market-group-service",
+      "type": "com.demo.web.bundle.market.model.service.MarketGroupService",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl"
+    },
+    {
+      "name": "esi.market.market-order-service",
+      "type": "com.demo.web.bundle.market.model.service.MarketOrderService",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl"
+    },
+    {
+      "name": "esi.market.markets",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl"
+    },
+    {
+      "name": "esi.market.params",
+      "type": "java.util.HashMap<java.lang.String,java.lang.Object>",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl"
+    },
+    {
+      "name": "esi.market.query-params",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl",
+      "defaultValue": "\/?datasource={datasource}&language={language}&page={page}"
+    },
+    {
+      "name": "esi.market.type-service",
+      "type": "com.demo.web.bundle.universe.model.service.TypeService",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl"
+    },
+    {
+      "name": "esi.market.universe-service",
+      "type": "com.demo.service.UniverseService",
+      "sourceType": "com.demo.service.impl.MarketServiceImpl"
     },
     {
       "name": "esi.universe.constellation-cache",

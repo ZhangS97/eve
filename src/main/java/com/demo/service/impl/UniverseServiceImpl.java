@@ -114,14 +114,13 @@ public class UniverseServiceImpl implements UniverseService
     public void updateRegions()
     {
         String regionsUrl = pre + "regions/";
-        String regionsDetailUrl = regionsUrl;
         Region tar;
         //获取所有id
         List<String> ids = MyRT.getReqCastIntListToStrList(regionsUrl,
                 params);
 
         //获取所有region的信息jsonList
-        List<String> jsonList = MyRT.getReqMultiById(regionsDetailUrl,
+        List<String> jsonList = MyRT.getReqMultiById(regionsUrl,
                 queryParams,
                 params,
                 ids);
@@ -146,7 +145,6 @@ public class UniverseServiceImpl implements UniverseService
     public void updateConstellations()
     {
         String constellatonsUrl = pre + "constellations/";
-        String constellatonsDetailUrl = constellatonsUrl;
         Constellation tar;
 
         //获取所有id
@@ -154,7 +152,7 @@ public class UniverseServiceImpl implements UniverseService
                 params);
 
         //获取所有region的信息jsonList
-        List<String> jsonList = MyRT.getReqMultiById(constellatonsDetailUrl,
+        List<String> jsonList = MyRT.getReqMultiById(constellatonsUrl,
                 queryParams,
                 params,
                 ids);
@@ -179,7 +177,6 @@ public class UniverseServiceImpl implements UniverseService
     public void updateSystems()
     {
         String systemsUrl = pre + "systems/";
-        String systemsDetailUrl = systemsUrl;
         System tar;
 
         //获取所有id
@@ -187,7 +184,7 @@ public class UniverseServiceImpl implements UniverseService
                 params);
 
         //获取所有system的信息jsonList
-        List<String> jsonList = MyRT.getReqMultiById(systemsDetailUrl,
+        List<String> jsonList = MyRT.getReqMultiById(systemsUrl,
                 queryParams,
                 params,
                 ids);

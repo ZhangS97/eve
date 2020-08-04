@@ -1,11 +1,12 @@
-package com.demo.web.bundle.market.model.service;
+package com.demo.service;
 
 import com.demo.web.bundle.market.entity.MarketOrder;
 import com.demo.web.bundle.universe.entity.Type;
 
 import java.util.List;
 
-public interface MarketService {
+public interface MarketService
+{
     void updateMarketGroups();
 
     void updateMarketOrders();

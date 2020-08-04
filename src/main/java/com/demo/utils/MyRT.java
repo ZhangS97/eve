@@ -48,6 +48,7 @@ public class MyRT
     }
 
     /**
+     * 获取需要翻页的所有id
      * getForObject默认返回List<Integer>
      * 需要通过流的方式转为List<String>
      */
@@ -113,12 +114,12 @@ public class MyRT
             Map localParams,
             List<String> ids)
     {
-        Log.logger.info(ids.toString());
         String jsonStr;
         List<String> list = new ArrayList<>();
 
         for (String id : ids)
         {
+            Log.logger.info(id);
             jsonStr = MyRT.getReq(url + id + queryParams, localParams);
             list.add(jsonStr);
         }
