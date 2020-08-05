@@ -19,18 +19,7 @@ public class CacheManager
     {
         this.redisTemplate = redisTemplate;
     }
-
-    public RedisTemplate getRedisTemplate()
-    {
-        return redisTemplate;
-    }
-
-    public static void setRedisTemplate(
-            RedisTemplate redisTemplate)
-    {
-        CacheManager.redisTemplate = redisTemplate;
-    }
-
+    
     public Object fetchOneByKey(String key)
     {
         return redisTemplate.opsForValue().get(key);
