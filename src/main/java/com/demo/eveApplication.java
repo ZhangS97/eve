@@ -42,8 +42,8 @@ public class eveApplication implements CommandLineRunner
     @Override
     public void run(String... args) throws Exception
     {
-//        marketGroupCache.doLoad();
-        universeService.updateSystems();
+        marketGroupCache.doLoad();
+//        universeService.updateSystems();
 //        service.updateUniverseInfo();
     }
 

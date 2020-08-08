@@ -12,10 +12,9 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Future;
 
 @Component(value = "marketGroupCache")
 public class MarketGroupCache extends CacheableTree
@@ -27,6 +26,9 @@ public class MarketGroupCache extends CacheableTree
 
     public static final String KEY_PARENT_ID = "market_group:parent_id:";
 
+    //存放父id及其对应的下一层儿子id，双层树状结构
+    private static Map<String, List<String>> map = new Hashtable<>();
+
     @Autowired
     @Qualifier("marketGroupsService")
     MarketGroupService service;
@@ -35,29 +37,24 @@ public class MarketGroupCache extends CacheableTree
     {
         List<List<MarketGroup>> allMarketGroups = ListUtils.groupList(service.findAll());
 
-        List<Future<Map>> futures = new ArrayList<>();
         MarketGroupCache marketGroupCacheProxy = SpringUtils.getBean(
                 MarketGroupCache.class);
 
-        //存放父id及其对应的下一层儿子id，双层树状结构
-        Map<String, List> map = new HashMap<>();
-
-        List<String> list = new ArrayList<>();
         for (List<MarketGroup> marketGroupList : allMarketGroups)
         {
-            futures.add(marketGroupCacheProxy.doLoadTask(marketGroupList));
+            marketGroupCacheProxy.doLoadTask(marketGroupList);
         }
 
         for (String str : map.keySet())
         {
-            saveOne(str, map.get(str).toString());
+            saveOne(KEY_PARENT_ID + str, JSON.toJSONString(map.get(str)));
         }
-
     }
 
     @Async
-    Future<Map> doLoadTask(List<MarketGroup> marketGroups)
+    void doLoadTask(List<MarketGroup> marketGroups)
     {
+        List<String> list;
         for (MarketGroup marketGroup : marketGroups)
         {
             //根据父id 查看是否存在兄弟list
@@ -76,14 +73,18 @@ public class MarketGroupCache extends CacheableTree
                 map.put(marketGroup.getParentGroupId(), list);
             }
 
-            //存储当前对象，及其父子id，共三种信息，
-            saveOneTree(
-                    KEY_ID + marketGroup.getMarketGroupId(),
-                    JSON.toJSONString(marketGroup),
-                    KEY_CHILDREN_ID + marketGroup.getMarketGroupId(),
-                    marketGroup.getTypes(),
-                    KEY_PARENT_ID + marketGroup.getMarketGroupId(),
-                    marketGroup.getParentGroupId());
+            //存储当前对象
+            saveOne(KEY_ID + marketGroup.getMarketGroupId(),
+                    JSON.toJSONString(marketGroup));
+
+            //存储子级物品单位
+            if (null != marketGroup.getTypes() ||
+                    (!"".equals(marketGroup.getTypes())))
+            {
+                //非空则存储
+                saveOne(KEY_CHILDREN_ID + marketGroup.getMarketGroupId(),
+                        marketGroup.getTypes());
+            }
 
         }
     }
