@@ -8,7 +8,10 @@ public class CacheableTree extends Cacheable
         return null;
     }
 
-    ;
+    public String fetchAllParentsById(String id)
+    {
+        return null;
+    }
 
     public void saveOneTree(String id, String selfVal, String childrenId,
             String childrenVal, String parentId, String parentVal)
