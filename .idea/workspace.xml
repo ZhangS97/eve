@@ -23,9 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1dc3a04e-d504-4cf3-b5f6-165472b4a97f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +102,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="userSettingsFile" value="G:\maven\settings.xml" />
+        <option name="localRepository" value="G:\repositories" />
+        <option name="mavenHome" value="D:\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3" />
+        <option name="userSettingsFile" value="C:\Users\Administrator\.m2\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -128,7 +128,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595927526192" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Untitled-1.xml" />
+    <property name="last_opened_file_path" value="G:/maven/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -155,13 +155,15 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -294,7 +296,9 @@
       <workItem from="1596630592952" duration="445000" />
       <workItem from="1596846137029" duration="6731000" />
       <workItem from="1597109704914" duration="691000" />
-      <workItem from="1597117014013" duration="894000" />
+      <workItem from="1597117014013" duration="1518000" />
+      <workItem from="1597141253007" duration="609000" />
+      <workItem from="1597303292759" duration="1223000" />
     </task>
     <task id="LOCAL-00001" summary="@Data替换@ToString">
       <created>1594042958153</created>
@@ -534,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596630981459</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="添加项目说明">
+      <created>1597117943263</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1597117943263</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -586,7 +597,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="update marketgroupcache" />
     <MESSAGE value="文件重命名" />
     <MESSAGE value="新增RegionCache" />
     <MESSAGE value="新增ConstellationCache" />
@@ -611,7 +621,8 @@
     <MESSAGE value="完成MarketGroup多线程请求更新" />
     <MESSAGE value="完成MarketGroup多线程缓存部分，需要先用redis实现消息队列功能" />
     <MESSAGE value="测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试" />
+    <MESSAGE value="添加项目说明" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加项目说明" />
   </component>
   <component name="WindowStateProjectService">
     <state x="700" y="311" key="#Customize_Threads_View" timestamp="1596541435127">
@@ -630,15 +641,16 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="659" y="162" key="#com.intellij.ide.util.MemberChooser/0.0.1707.920@0.0.1707.920" timestamp="1596520804644" />
-    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1596631044988">
-      <screen x="0" y="0" width="1463" height="783" />
+    <state x="457" y="28" key="CommitChangelistDialog2" timestamp="1597117942486">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="392" y="0" key="CommitChangelistDialog2/0.0.1463.783@0.0.1463.783" timestamp="1596631044988" />
-    <state x="457" y="28" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1596544559860" />
-    <state x="509" y="136" key="FileChooserDialogImpl" timestamp="1596630576740">
-      <screen x="0" y="0" width="1463" height="783" />
+    <state x="457" y="28" key="CommitChangelistDialog2/0.0.1707.920@0.0.1707.920" timestamp="1597117942486" />
+    <state x="594" y="160" key="FileChooserDialogImpl" timestamp="1597304305587">
+      <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state x="509" y="136" key="FileChooserDialogImpl/0.0.1463.783@0.0.1463.783" timestamp="1596630576740" />
+    <state x="594" y="160" key="FileChooserDialogImpl/0.0.1707.920@0.0.1707.920" timestamp="1597304305587" />
     <state width="1351" height="299" key="GridCell.Tab.0.bottom" timestamp="1596544595511">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
@@ -687,15 +699,15 @@
       <screen x="0" y="0" width="1707" height="920" />
     </state>
     <state width="1351" height="299" key="GridCell.Tab.2.right/0.0.1707.920@0.0.1707.920" timestamp="1596544595512" />
-    <state x="304" y="74" key="SettingsEditor" timestamp="1596630788608">
-      <screen x="0" y="0" width="1463" height="783" />
-    </state>
-    <state x="304" y="74" key="SettingsEditor/0.0.1463.783@0.0.1463.783" timestamp="1596630788608" />
-    <state x="355" y="105" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1596109919850" />
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1596544562653">
+    <state x="355" y="105" key="SettingsEditor" timestamp="1597304314690">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
-    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1596544562653" />
+    <state x="304" y="74" key="SettingsEditor/0.0.1463.783@0.0.1463.783" timestamp="1596630788608" />
+    <state x="355" y="105" key="SettingsEditor/0.0.1707.920@0.0.1707.920" timestamp="1597304314690" />
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2" timestamp="1597117945543">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="446" y="194" key="Vcs.Push.Dialog.v2/0.0.1707.920@0.0.1707.920" timestamp="1597117945543" />
     <state x="399" y="190" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1596524713141">
       <screen x="0" y="0" width="1707" height="920" />
     </state>
