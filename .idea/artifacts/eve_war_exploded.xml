@@ -89,7 +89,7 @@
           <element id="library" level="project" name="Maven: io.netty:netty-resolver:4.1.43.Final" />
           <element id="library" level="project" name="Maven: io.projectreactor:reactor-core:3.3.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.reactivestreams:reactive-streams:1.0.3" />
-          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.11.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.13.2" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.11.1" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-slf4j-impl:2.11.1" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.29" />
