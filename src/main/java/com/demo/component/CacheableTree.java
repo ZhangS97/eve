@@ -3,7 +3,7 @@ package com.demo.component;
 public class CacheableTree extends Cacheable
 {
 
-    public String fetchOneAndChildrenById(String id)
+    public String fetchAllChildrenById(String id)
     {
         return null;
     }
