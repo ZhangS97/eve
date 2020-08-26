@@ -20,7 +20,8 @@ import java.util.List;
 @Service("dogmaService")
 @Component
 @ConfigurationProperties(prefix = "esi.dogma")
-public class DogmaServiceImpl implements DogmaService {
+public class DogmaServiceImpl implements DogmaService
+{
     @Autowired
     AttributeService attributeService;
 
@@ -44,11 +45,13 @@ public class DogmaServiceImpl implements DogmaService {
      *
      * */
     @Override
-    public void updateAttributes() {
+    public void updateAttributes()
+    {
         String attributesDetailUrl = pre163 + "attributes/";
         String jsonStr;
         List<String> attributeIds = getAllAttributeIds();
-        for (String id : attributeIds) {
+        for (String id : attributeIds)
+        {
             jsonStr = MyRT.getReq(attributesDetailUrl + id + queryParams163,
                     params);
             attributeService.save(JSON.parseObject(jsonStr, Attribute.class));
@@ -56,7 +59,8 @@ public class DogmaServiceImpl implements DogmaService {
     }
 
     @Override
-    public List<String> getAllAttributeIds() {
+    public List<String> getAllAttributeIds()
+    {
         String attributesUrl = pre163 + "attributes/";
         return MyRT.restTemplate.getForObject(attributesUrl,
                 List.class,
@@ -68,11 +72,13 @@ public class DogmaServiceImpl implements DogmaService {
      *
      * */
     @Override
-    public void updateEffects() {
+    public void updateEffects()
+    {
         String effectsDetailUrl = pre163 + "effects/";
         String jsonStr;
         List<String> effectsIds = getAllEffectIds();
-        for (String id : effectsIds) {
+        for (String id : effectsIds)
+        {
             jsonStr = MyRT.getReq(effectsDetailUrl + id + queryParams163,
                     params);
             effectService.save(JSON.parseObject(jsonStr, Effect.class));
@@ -80,7 +86,8 @@ public class DogmaServiceImpl implements DogmaService {
     }
 
     @Override
-    public List<String> getAllEffectIds() {
+    public List<String> getAllEffectIds()
+    {
         String effectsUrl = pre163 + "effects/";
         return MyRT.restTemplate.getForObject(effectsUrl,
                 List.class,
