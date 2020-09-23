@@ -1,7 +1,7 @@
 package com.demo.web.bundle.market.cache;
 
 import com.alibaba.fastjson.JSON;
-import com.demo.component.CacheableTree;
+import com.demo.component.cache.CacheableTree;
 import com.demo.web.bundle.market.entity.MarketGroup;
 import com.demo.web.bundle.market.model.service.MarketGroupService;
 import org.springframework.beans.factory.annotation.Autowired;

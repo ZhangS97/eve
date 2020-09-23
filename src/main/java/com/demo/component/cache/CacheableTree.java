@@ -1,4 +1,4 @@
-package com.demo.component;
+package com.demo.component.cache;
 
 public class CacheableTree extends Cacheable
 {

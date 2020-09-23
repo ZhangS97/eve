@@ -6,7 +6,7 @@ import com.demo.service.MarketService;
 import com.demo.service.UniverseService;
 import com.demo.utils.ListUtils;
 import com.demo.utils.MyRT;
-import com.demo.utils.SpringUtils;
+import com.demo.utils.BeanUtils;
 import com.demo.utils.StringUtil;
 import com.demo.web.bundle.market.entity.MarketGroup;
 import com.demo.web.bundle.market.entity.MarketOrder;
@@ -166,7 +166,7 @@ public class MarketServiceImpl implements MarketService
     {
         List<String> regionID = universeService.getHighSecureRegionsID();
         List<List<String>> regionIDList = ListUtils.groupList(regionID);
-        MarketServiceImpl marketServiceImplProxy = SpringUtils.getBean(
+        MarketServiceImpl marketServiceImplProxy = BeanUtils.getBean(
                 MarketServiceImpl.class);
         for (List<String> lt : regionIDList)
         {

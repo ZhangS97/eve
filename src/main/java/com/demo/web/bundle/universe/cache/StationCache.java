@@ -1,9 +1,9 @@
 package com.demo.web.bundle.universe.cache;
 
 import com.alibaba.fastjson.JSON;
-import com.demo.component.Cacheable;
+import com.demo.component.cache.Cacheable;
 import com.demo.utils.ListUtils;
-import com.demo.utils.SpringUtils;
+import com.demo.utils.BeanUtils;
 import com.demo.web.bundle.universe.entity.Station;
 import com.demo.web.bundle.universe.model.service.StationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class StationCache extends Cacheable
     public void doLoad()
     {
         List<List<Station>> allStations = ListUtils.groupList(stationService.findAll());
-        StationCache stationCacheProxy = SpringUtils.getBean(StationCache.class);
+        StationCache stationCacheProxy = BeanUtils.getBean(StationCache.class);
 
         for (List<Station> station : allStations)
         {
