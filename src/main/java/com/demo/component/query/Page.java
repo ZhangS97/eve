@@ -6,4 +6,13 @@ import lombok.Data;
 public class Page
 {
     protected int page;
+
+    public int getPage()
+    {
+        if (this.page <= 0)
+        {
+            this.page = 1;
+        }
+        return this.page;
+    }
 }
