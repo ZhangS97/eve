@@ -1,7 +1,7 @@
 package com.demo.web.bundle.universe.cache;
 
 import com.alibaba.fastjson.JSON;
-import com.demo.component.Cacheable;
+import com.demo.component.cache.Cacheable;
 import com.demo.web.bundle.universe.entity.Type;
 import com.demo.web.bundle.universe.model.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;

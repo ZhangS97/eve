@@ -1,9 +1,9 @@
 package com.demo.web.bundle.universe.cache;
 
 import com.alibaba.fastjson.JSON;
-import com.demo.component.Cacheable;
+import com.demo.component.cache.Cacheable;
 import com.demo.utils.ListUtils;
-import com.demo.utils.SpringUtils;
+import com.demo.utils.BeanUtils;
 import com.demo.web.bundle.universe.entity.System;
 import com.demo.web.bundle.universe.model.service.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class SystemCache extends Cacheable
     public void doLoad()
     {
         List<List<System>> allSystems = ListUtils.groupList(systemService.findAll());
-        SystemCache systemCacheProxy = SpringUtils.getBean(SystemCache.class);
+        SystemCache systemCacheProxy = BeanUtils.getBean(SystemCache.class);
 
         for (List<System> systems : allSystems)
         {

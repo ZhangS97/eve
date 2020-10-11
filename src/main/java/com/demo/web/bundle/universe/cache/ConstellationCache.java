@@ -1,9 +1,9 @@
 package com.demo.web.bundle.universe.cache;
 
 import com.alibaba.fastjson.JSON;
-import com.demo.component.Cacheable;
+import com.demo.component.cache.Cacheable;
 import com.demo.utils.ListUtils;
-import com.demo.utils.SpringUtils;
+import com.demo.utils.BeanUtils;
 import com.demo.web.bundle.universe.entity.Constellation;
 import com.demo.web.bundle.universe.model.service.ConstellationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class ConstellationCache extends Cacheable
         List<List<Constellation>> allConstellations = ListUtils.groupList(
                 constellationService.findAll());
 
-        ConstellationCache constellationCacheProxy = SpringUtils.getBean(
+        ConstellationCache constellationCacheProxy = BeanUtils.getBean(
                 ConstellationCache.class);
         for (List<Constellation> constellations : allConstellations)
         {

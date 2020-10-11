@@ -1,4 +1,4 @@
-package com.demo.component;
+package com.demo.component.cache;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;

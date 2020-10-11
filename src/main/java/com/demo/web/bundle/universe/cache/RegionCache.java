@@ -1,9 +1,9 @@
 package com.demo.web.bundle.universe.cache;
 
 import com.alibaba.fastjson.JSON;
-import com.demo.component.Cacheable;
+import com.demo.component.cache.Cacheable;
 import com.demo.utils.ListUtils;
-import com.demo.utils.SpringUtils;
+import com.demo.utils.BeanUtils;
 import com.demo.web.bundle.universe.entity.Region;
 import com.demo.web.bundle.universe.model.service.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class RegionCache extends Cacheable
     public void doLoad()
     {
         List<List<Region>> allRegions = ListUtils.groupList(regionService.findAll());
-        RegionCache regionCacheProxy = SpringUtils.getBean(RegionCache.class);
+        RegionCache regionCacheProxy = BeanUtils.getBean(RegionCache.class);
 
         for (List<Region> regions : allRegions)
         {

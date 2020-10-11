@@ -76,7 +76,7 @@ public class MyRT
         List<List<String>> idList = ListUtils.groupList(ids);
 
         List<String> resList = new ArrayList<>();
-        MyRT myRTProxy = SpringUtils.getBean(MyRT.class);
+        MyRT myRTProxy = BeanUtils.getBean(MyRT.class);
 
         //为了异步操作用Future接受
         List<Future<List<String>>> futures = new ArrayList<>();
