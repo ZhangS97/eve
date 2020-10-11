@@ -6,21 +6,31 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component("springContextUtil")
-public class BeanUtils implements ApplicationContextAware {
-
+public class BeanUtils implements ApplicationContextAware
+{
 
     private static ApplicationContext applicationContext = null;
 
-    public static ApplicationContext getApplicationContext() {
+    public static ApplicationContext getApplicationContext()
+    {
         return applicationContext;
     }
 
     @SuppressWarnings("unchecked")
-    public static <T> T getBean(String beanId) {
+    public static <T> T getBean(String beanId)
+    {
         return (T) applicationContext.getBean(beanId);
     }
 
-    public static <T> T getBean(Class<T> requiredType) {
+    /**
+     * 根据类型获取bean
+     *
+     * @param requiredType
+     * @param <T>
+     * @return
+     */
+    public static <T> T getBean(Class<T> requiredType)
+    {
         return (T) applicationContext.getBean(requiredType);
     }
 
@@ -30,7 +40,9 @@ public class BeanUtils implements ApplicationContextAware {
      *
      * @see org.springframework.context.ApplicationContextAware#setApplicationContext(org.springframework.context.ApplicationContext)
      */
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+    public void setApplicationContext(ApplicationContext applicationContext)
+            throws BeansException
+    {
         BeanUtils.applicationContext = applicationContext;
     }
 }

@@ -14,6 +14,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Enumeration;
 
+/**
+ * log aop 暂未启用
+ */
 @Aspect
 @Component
 public class Log
