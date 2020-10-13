@@ -1,5 +1,6 @@
 package com.demo.web.bundle.market.entity;
 
+import com.demo.component.tree.TreeNode;
 import lombok.Data;
 
 import javax.persistence.Entity;
@@ -16,7 +17,8 @@ import java.io.Serializable;
 @Data
 @Table(name = "market_groups")
 @Entity
-public class MarketGroup implements Serializable {
+public class MarketGroup extends TreeNode implements Serializable
+{
     private static final long serialVersionUID = -46034883049783062L;
 
     private String description;
