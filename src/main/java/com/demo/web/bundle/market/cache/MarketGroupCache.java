@@ -19,10 +19,9 @@ public class MarketGroupCache extends CacheableTree
 
     public static final String NAME = "";
 
+    // 根据 markerGroup得id存取数据
     public static final String KEY_ID = "market_group:id:";
-
-    public static final String KEY_CHILDREN_ID = "market_group:children_id:";
-
+    // 根据 markerGroup得id存取该数据得所有孩子
     public static final String KEY_PARENT_ID = "market_group:parent_id:";
 
     @Autowired
@@ -58,9 +57,6 @@ public class MarketGroupCache extends CacheableTree
             //存储当前对象
             saveOne(KEY_ID + marketGroup.getMarketGroupId(),
                     JSON.toJSONString(marketGroup));
-            //存储下级对象
-            saveOne(KEY_CHILDREN_ID + marketGroup.getMarketGroupId(),
-                    marketGroup.getTypes());
         }
 
         //根据父级id存储下属所有节点
@@ -69,6 +65,37 @@ public class MarketGroupCache extends CacheableTree
             saveOne(KEY_PARENT_ID + str, JSON.toJSONString(map.get(str)));
         }
 
+    }
+
+    // 取整层
+    public List<MarketGroup> fetchOneLeveByParentId(String pid){
+        String[] ids = fetchOne(KEY_PARENT_ID+pid).split(",");
+        List<MarketGroup> marketGroupList = new ArrayList<>();
+        for (String id:ids){
+            marketGroupList.add(fetchOneById(id));
+        }
+        return marketGroupList;
+    }
+
+    /**
+     *
+     * @param pid
+     * @return
+     */
+    public List<MarketGroup> fetchOneLeveAndParentByParentId(String pid){
+         List<MarketGroup> marketGroupList = fetchOneLeveByParentId(pid);
+         marketGroupList.add(0,fetchOneById(pid));
+        return marketGroupList;
+    }
+
+
+    /**
+     * 取单个
+     * @param id
+     * @return
+     */
+    public MarketGroup fetchOneById(String id){
+        return JSON.parseObject(fetchOne(KEY_ID+id),MarketGroup.class);
     }
 
 }

@@ -36,7 +36,7 @@ public class MarketController
     @ResponseBody
     public String getMarketOrderTree(int regionId)
     {
-        marketGroupCache.fetchOne();
+//        marketGroupCache.fetchOne();
         return null;
     }
 }
